@@ -11,7 +11,7 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> -->
 
         <!-- Styles -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+        @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
     <body class="technology">
@@ -20,9 +20,7 @@
 
     <main class="contenue_principal">
         <p>technology</p>
-        <title>L'ESPACE</title>
-        <p>Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire!</p>
-        <a a href="destination.blade.php"class="cta-button">EXPLORER</a>
+       
     </main>   
                 
     </body>

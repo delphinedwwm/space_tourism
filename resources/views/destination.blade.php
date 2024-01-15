@@ -14,15 +14,14 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
-    <body class="crew">
+    <body class="destination">
     
         @include('layouts.header')
 
     <main class="contenue_principal">
-        <p>crew</p>
-        <h1>L'ESPACE</h1>
-        <p></p>
-        <a a href="destination.blade.php"class="cta-button">EXPLORER</a>
+        <p>destination</p>
+       
+        
     </main>   
                 
     </body>

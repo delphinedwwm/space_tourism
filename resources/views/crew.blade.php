@@ -20,8 +20,7 @@
 
     <main class="contenue_principal">
         <p>crew</p>
-        <h1>ESPACE</h1>
-        <a a href="destination.blade.php"class="cta-button">EXPLORER</a>
+        
     </main>   
                 
     </body>

@@ -20,7 +20,5 @@
         <li><a href="/technology" alt="page_technology"><span class="number">03</span>Technology</a></li>
     </ul>
 </nav>
-
- 
-            
+           
 </header>
