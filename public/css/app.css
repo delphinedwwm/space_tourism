@@ -7,8 +7,11 @@
 :root {
 
      /*déclaration variable police*/
-    --police-titres: "BelleFair";
-    --police-sous-titres:"Barlow Condensed";
+    --police-titre1: "BelleFair";
+    --police-titre2: "Barlow";
+    --police-sous-titre1:"Bellefair";
+    --police-sous-titre2:"Barlow Condensed";
+    --police-navigatation:"Barlow Condensed";
     --police-lecture: "Barlow";
 
     /*déclaration variable couleur*/
@@ -150,11 +153,10 @@
 
     li {
         list-style: none;
-        
     }
 
     a {
-        font-family: var(--police-sous-titres);
+        font-family: var(--police-navigatation);
         font-size: 16px;
         color: #fff;
         display: block;
@@ -174,6 +176,7 @@
         width: 30px;
         height: 19px;
         margin-top: 6px;
+        margin-right: 0.5rem;
         text-align: center;
         letter-spacing: 2.7px;
     }
@@ -181,8 +184,18 @@
 /* ---- fin du css mobile paramètres communs à toutes les pages -------*/
 
 /*------début css mobile page d'accueil ------*/
-.home {
-    background-image: url("/public/images/home_background.jpg");
+.home-background_container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/public/images/home_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    transform: rotate(90deg);
+    transform-origin: top left;
 }
 main {
     display: flex;
@@ -268,21 +281,18 @@ p {
 /*----------début css mobile page destination----------------- */
 
 .destination {
-    background-image: url("/public/images/destination_background.jpg");
-}
-h1 {
-    font-family: var(--police-titres);;
+    
 }
 
 /* ---------début css mobile page crew----------------- */
 
 .crew {
-    background-image: url("/public/images/crew_background.jpg");
+   
 }
 
 /* ---------début css mobile page technology---------------- */
 .technology {
-    background-image: url("/public/images/technology_background.png");
+    
 }
   
 
@@ -290,12 +300,16 @@ h1 {
 
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
-    
-}
-  
+
 @media screen and (min-width : 769px) and (max-width : 1440px) {
     /*  paramètres généraux ------------------------- */
-  
+ 
+    .background_container{
+        transform: rotate(-90deg);
+        
+    }    
+    }
+      
 }
 
  

@@ -15,16 +15,22 @@
       
     </head>
     <body class="home">
-    
+
+        <div class="background_container">
+            <img src="../images/home_background.jpg" alt="image de fond page d'accueil">  
+        </div>
+
         @include('layouts.header')
 
-    <div class="enveloppe">
-        <main class="contenue_principal">
-            <p class="slogan">VOUS VOULEZ VOYAGER DANS</p>
-            <h1>L'ESPACE</h1>
-            <p class="speech">Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire&nbsp;!</p> 
-            <a a href="destination.blade.php"class="cta-button">EXPLORER</a>
-        </main>   
-    </div>            
+        <div class="enveloppe">
+            
+            <main class="contenue_principal">
+                <p class="slogan">VOUS VOULEZ VOYAGER DANS</p>
+                <h1>L'ESPACE</h1>
+                <p class="speech">Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire&nbsp;!</p> 
+                <a a href="/destination"class="cta-button">EXPLORER</a>
+            </main>  
+
+        </div>            
     </body>
 </html>
