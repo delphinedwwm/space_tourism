@@ -191,7 +191,6 @@
     background-image: url('/public/images/home_background.jpg');
 }
 
-
 main {
     display: flex;
     flex-direction: column;
@@ -200,14 +199,24 @@ main {
     width: 87,2% ;
 }
 
-h2, 
+.titre_principal {
+    font-family: var(--police-lecture);
+    color: var(--secondary-color);
+    line-height: 25px;
+    font-size: 15px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.titre_principal span {
+    
+}
 p {
     color: var(--secondary-color);
     
 }
 
 h1, 
-h2, 
 p {
     font-weight: 400;
 }
@@ -227,13 +236,7 @@ h2 {
     text-align: center;
 }
 
-.slogan {
-    font-family: var(--police-lecture);
-    line-height: 25px;
-    font-size: 15px;
-    margin-top: 20px;
-    text-align: center;
-}
+
 
 .speech {
     width: 82.7%;
@@ -270,29 +273,36 @@ h2 {
 
 /*------fin css mobile page d'accueil--------------------------*/
 
+/*----- css commun aux pages destination et crew ----------------------*/
 
-
-
-/*----------début css mobile page destination----------------- */
-
-
-.destination {
-    background-image: url("/public/images/destination_background.jpg");
+.destination,
+.crew {
+    background-image: url("/public/images/destination_background.png");
 }
 
-.number_titre_h2{
+.destination .number_titre_h2,
+.crew .number_titre_h2,
+.technology .number_titre_h2 {
     font-family: var(--police-sous-titre2);
     color: var(--primary-color);
-    font-weight: bold;
+    opacity: 0.25;
+    left: 0px;
+    top: 0px;
+    width: 18px;
+    height: 19px;
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 2.7px;
+    padding-right: 1rem;
 }
 
-
-/* ---------début css mobile page crew----------------- */
-
-.crew {
-    background-image: url("/public/images/crew_background.jpg");
+.title {
+    font-family: var(--police-sous-titre2);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
 }
-
 
 
 

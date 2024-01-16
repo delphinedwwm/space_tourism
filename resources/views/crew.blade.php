@@ -14,12 +14,13 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
-    <body class="crew">
+    <body class="destination">
     
         @include('layouts.header')
-
+    <h1 class="titre 2"><span class="number_titre_h2">02</span>Rencontrez l'équipage</h1>
     <main class="contenue_principal">
-        <p>crew</p>
+        
+       
         
     </main>   
                 

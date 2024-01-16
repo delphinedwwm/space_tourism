@@ -19,17 +19,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/home', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/destination', function () {
     return view('destination');
-});
+})->name('destination');
 
 Route::get('/crew', function () {
     return view('crew');
-});
+})->name('crew');
 
 Route::get('/technology', function () {
     return view('technology');
-});
+})->name('technology');
 
