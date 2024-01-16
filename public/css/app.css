@@ -46,7 +46,7 @@
     justify-content:space-between;
     margin-bottom: 2rem;
     /* margin-top: 2rem; */
-    margin-left: 8.65%;
+    padding-left: 2rem;
     padding-top: 4rem;
 }
 
@@ -136,7 +136,7 @@
     opacity: 0;
     text-align: start;
     transition: all 0.3s ease-in-out; /*fonction de temporisation qui commence lentement, accélère au milieu de la transition, puis ralentit à la fin.*/
-    width: 67.73%;
+    /* width: 67.73%; */
     right: 0;
 
     &.overlay {
@@ -187,6 +187,9 @@
 /* ---- fin du css mobile paramètres communs à toutes les pages -------*/
 
 /*------début css mobile page d'accueil ------*/
+.home {
+    background-image: url('/public/images/home_background.jpg');
+}
 
 
 main {
@@ -255,7 +258,6 @@ h2 {
 }
 
 
-
 /*  bouton  explorer*/
 /* .cta-button a {
     position: relative;
@@ -272,14 +274,17 @@ h2 {
 
 
 /*----------début css mobile page destination----------------- */
-.home {
-    background-image: url('/public/images/home_background.jpg');
-}
+
 
 .destination {
     background-image: url("/public/images/destination_background.jpg");
 }
 
+.number_titre_h2{
+    font-family: var(--police-sous-titre2);
+    color: var(--primary-color);
+    font-weight: bold;
+}
 
 
 /* ---------début css mobile page crew----------------- */

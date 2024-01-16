@@ -19,7 +19,7 @@
         @include('layouts.header')
 
     <main class="contenue_principal">
-        <p>destination</p>
+        <h2 class="title"><span class="number_titre_h2">01</span>CHOISISSEZ VOTRE DESTINATION</h2>
        
         
     </main>   
