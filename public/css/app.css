@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2? family= Bellefair & display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bellefair&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
 
@@ -32,24 +32,27 @@
 .home,
 .destination,
 .crew,
-.technology .enveloppe {
+.technology {
     background-size: cover;
     background-repeat:no-repeat;
-    width: 375px;
-    margin: 0 auto;
-    /* text-align: center; */
     display: flex;
     flex-direction: column;
 }
 
 .entete-page {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content:space-between;
     margin-bottom: 2rem;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    margin-left: 8.65%;
+    padding-top: 4rem;
 }
 
+#logo {
+    position: absolute;
+}
 
 /* ---début css burger normal et au survol------------ */
 #burger-menu {
@@ -59,17 +62,18 @@
     overflow: visible;
     position: relative;
     z-index: 2;
-
+    margin-right: 30px;
     /* // THE LINES of burger créer une animation représentant une croix*/
     span,
     span:before,
     span:after {
-        background: var(--secondary-color);
+        background-color: var(--secondary-color);
         display: block;
         height: 2px;
         opacity: 1;
         position: absolute;
         transition: 0.3s ease-in-out;
+        
     }
 
     span:before, /*Positionne la première ligne du hamburger icon.*/
@@ -131,20 +135,19 @@
     visibility: hidden;
     opacity: 0;
     text-align: start;
-    padding-top: 20px;
-    padding-left: 1rem;
     transition: all 0.3s ease-in-out; /*fonction de temporisation qui commence lentement, accélère au milieu de la transition, puis ralentit à la fin.*/
-    width: 254px;
+    width: 67.73%;
     right: 0;
 
     &.overlay {
         visibility: visible;
         opacity: 10;
         padding-top: 100px;
-        background: rgba(255, 255, 255, 0.04); /*0.04 opacité*/
+        background-color: rgba(255, 255, 255, 0.04);  /* 0.04 opacité */
         background-blend-mode: normal; /* définit comment l'arrière-plan d'un élément doit être mélangé avec son contenu ici normal = rien ne se passe*/
         backdrop-filter: blur(25px); /*flou à l'arrière-plan de l'élément*/
-        width: 254px;
+        width: 67.73%;
+        height: 100vh;
     }
 
     ul {
@@ -166,7 +169,7 @@
         margin-bottom: 30px;
         text-decoration: none; 
         letter-spacing: 2.7px;
-        width: 76,25px;
+        width: 59.2%;
     }
     
     .number {
@@ -184,43 +187,31 @@
 /* ---- fin du css mobile paramètres communs à toutes les pages -------*/
 
 /*------début css mobile page d'accueil ------*/
-.home-background_container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('/public/images/home_background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    transform: rotate(90deg);
-    transform-origin: top left;
-}
+
+
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; 
+    width: 87,2% ;
 }
 
 h2, 
 p {
     color: var(--secondary-color);
-    text-align: justify;
+    
 }
 
 h1, 
 h2, 
 p {
     font-weight: 400;
-    width: 327px;
 }
 
 h1 {
     color: var(--third-color);
-    font-family: var(--police-titres);
+    font-family: var(--police-titre1);
     line-height: 95px;
     font-size: 76px;
     margin-top: 35px;
@@ -231,83 +222,117 @@ h2 {
     line-height: 19,2px;
     font-size: 16px;
     text-align: center;
-
 }
 
-p {
+.slogan {
     font-family: var(--police-lecture);
     line-height: 25px;
     font-size: 15px;
     margin-top: 20px;
+    text-align: center;
+}
+
+.speech {
+    width: 82.7%;
+    text-align: justify;
 }
 
 .cta-button {
-    display: flex;
-    align-items: center;
-    padding: 10px 20px;
-    /* font-size: 16px; */
-    text-align: center;
+    position: relative;
+    margin-top: 100px;
     text-decoration: none;
     background-color: var(--third-color); 
     color: var(--primary-color); 
     border-radius: 100%;  
-    overflow: hidden; 
-    position: relative;
     transition: background-color 0.3s, border-color 0.3s; /* Ajoute une transition aux propriétés modifiées au survol */
     width: 150px;
     height: 150px;
-    line-height: center;
+    aspect-ratio: 1/1; /* la hauteur est la meme que la hauteur*/
+    line-height: 150px; /* texte centé en hauteur si une seule ligne de texte et que le conteneur est un element texte*/
+    text-align: center;
     z-index:0;
     font-family: var(--police-titres);
 }
 
-.cta-button:hover {
-    background-color: var(--third-color); 
-    border: 30px solid rgba(255, 255, 255, 0.5); 
-}
+
 
 /*  bouton  explorer*/
-.cta-button a {
+/* .cta-button a {
     position: relative;
+    text-align:center;
     line-height: 22,92px;
-    font-family: var(--police-titres);
+    font-family: var(--police-titre1);
     font-size: 20px;
     width: 400px;
-    margin-top: 63,91px;
-}
+} */
 
 /*------fin css mobile page d'accueil--------------------------*/
 
+
+
+
 /*----------début css mobile page destination----------------- */
+.home {
+    background-image: url('/public/images/home_background.jpg');
+}
 
 .destination {
-    
+    background-image: url("/public/images/destination_background.jpg");
 }
+
+
 
 /* ---------début css mobile page crew----------------- */
 
 .crew {
-   
+    background-image: url("/public/images/crew_background.jpg");
 }
+
+
+
+
 
 /* ---------début css mobile page technology---------------- */
 .technology {
-    
+    background-image: url("/public/images/technology_background.png");
 }
   
 
+
 /*---fin css mobile en globalité---------------------------------*/
+
+
+
 
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
 
+
+
+
+
+
+
+
+
 @media screen and (min-width : 769px) and (max-width : 1440px) {
     /*  paramètres généraux ------------------------- */
- 
-    .background_container{
-        transform: rotate(-90deg);
+    .enveloppe {
+        width: 100%;
+        background-size: cover;
+        transform: rotate(90deg);
+    }
+    .cta-button:hover::after {
+        content: '';
+        position: absolute;
+        top: -150px; /* Ajustez selon la largeur de la "bordure" */
+        left: -150px; /* Ajustez selon la largeur de la "bordure" */
+        right: -150px; /* Ajustez selon la largeur de la "bordure" */
+        bottom: -150px; /* Ajustez selon la largeur de la "bordure" */
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 100%;
         
-    }    
+    } 
     }
       
 }
