@@ -17,12 +17,16 @@
     <body class="destination">
     
         @include('layouts.header')
-    <h1 class="titre 1"><span class="number_titre_h1">02</span>Rencontrez l'équipage</h1>
-    <main class="contenu_principal">
-        
-       
-        
-    </main>   
+
+        <main class="contenu_principal">
+
+            <h1 class="title"><span class="number_titre_h1">02</span>Rencontrez l'équipage</h1>
+
+               
+            
+
+        </main>   
+    
                 
     </body>
 </html>

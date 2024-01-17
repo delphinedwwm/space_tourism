@@ -270,7 +270,7 @@ p {
 
 /*------fin css mobile page d'accueil--------------------------*/
 
-/*----- css commun aux pages destination et crew ----------------------*/
+/*----- css commun aux pages destination, crew et technology ----------------------*/
 
 .destination,
 .crew {
@@ -293,8 +293,15 @@ p {
     padding-right: 1rem;
 }
 
+.destination ul,
+.crew ul,
+.technology ul {
+    color: var(--third-color);
+}
+
 .title {
     font-family: var(--police-sous-titre2);
+    color: var(--third-color);
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 400;
@@ -337,10 +344,6 @@ p {
     .cta-button:hover::after {
         content: '';
         position: absolute;
-        top: -150px; /* Ajustez selon la largeur de la "bordure" */
-        left: -150px; /* Ajustez selon la largeur de la "bordure" */
-        right: -150px; /* Ajustez selon la largeur de la "bordure" */
-        bottom: -150px; /* Ajustez selon la largeur de la "bordure" */
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 100%;
         

@@ -14,15 +14,24 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
+
     <body class="destination">
     
         @include('layouts.header')
 
-    <main class="contenu_principal">
-        <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
-       
-        
-    </main>   
+            <main class="contenu_principal">
                 
+                <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
+
+                <ul>
+                    @foreach($articles as $article)
+                    <li>{{$article['picture']}}</li>
+                    @endforeach
+                </ul>
+
+            </main>   
+
+ 
+         
     </body>
 </html>

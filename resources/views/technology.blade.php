@@ -14,14 +14,18 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
+
     <body class="technology">
     
         @include('layouts.header')
 
-    <main class="contenue_principal">
-        <p>technology</p>
-       
-    </main>   
+            <main class="contenu_principal">
                 
+                <h1 class="title"><span class="number_titre_h1">03</span>Lanceur spatial 101</h1>
+
+
+            </main>   
+            
     </body>
+    
 </html>
