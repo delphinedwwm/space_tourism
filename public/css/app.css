@@ -258,16 +258,6 @@ p {
 }
 
 
-/*  bouton  explorer*/
-/* .cta-button a {
-    position: relative;
-    text-align:center;
-    line-height: 22,92px;
-    font-family: var(--police-titre1);
-    font-size: 20px;
-    width: 400px;
-} */
-
 /*------fin css mobile page d'accueil--------------------------*/
 
 /*----- css commun aux pages destination, crew et technology ----------------------*/
@@ -277,14 +267,19 @@ p {
     background-image: url("/public/images/destination_background.png");
 }
 
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
 .destination .number_titre_h1,
 .crew .number_titre_h1,
 .technology .number_titre_h1 {
     font-family: var(--police-sous-titre2);
     color: var(--secondary-color);
     opacity: 0.25;
-    left: 0px;
-    top: 0px;
     width: 18px;
     height: 19px;
     color: #ffffff;
@@ -293,10 +288,11 @@ p {
     padding-right: 1rem;
 }
 
-.destination ul,
-.crew ul,
-.technology ul {
-    color: var(--third-color);
+.destination .title,
+.crew .title,
+.technology .title {
+    margin-bottom: 2rem;
+
 }
 
 .title {
@@ -308,8 +304,36 @@ p {
     letter-spacing: 2.7px;
 }
 
+/* ---------début css mobile page destination---------------- */
 
+.destination img {
+    width: 45.33%;
+    margin-bottom: 2rem;
+}
+.nom_planete {
+    color: var(--third-color);
+    font-family: var(--police-titre1);
+    font-size: 56px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+.description {
+    width: 87.2%;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-family: var(--police-lecture);
+    font-size: 15px;
+}
 
+.distance {
+    margin-bottom: 1rem;
+}
+
+.duree {
+    margin-bottom: 2rem;
+}
+/* ---------début css mobile page crew ---------------- */
 
 /* ---------début css mobile page technology---------------- */
 .technology {
@@ -321,22 +345,15 @@ p {
 /*---fin css mobile en globalité---------------------------------*/
 
 
-
-
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
 
 
 
 
-
-
-
-
-
 @media screen and (min-width : 769px) and (max-width : 1440px) {
     /*  paramètres généraux ------------------------- */
-    .enveloppe {
+    /* .enveloppe {
         width: 100%;
         background-size: cover;
         transform: rotate(90deg);
@@ -347,7 +364,7 @@ p {
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 100%;
         
-    } 
+    }  */
     }
       
 }

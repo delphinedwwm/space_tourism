@@ -20,18 +20,20 @@
         @include('layouts.header')
 
             <main class="contenu_principal">
-                
+
                 <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
 
-                <ul>
-                    @foreach($articles as $article)
-                    <li>{{$article['picture']}}</li>
-                    @endforeach
-                </ul>
+                @foreach($articles as $article)
+                    <section>
+                        <img src="{{ $article['picture'] }}" alt="{{ $article['title'] }}">
+                        <h2 class="nom_planete">{{ $article['title'] }}</h2>
+                        <p class="description">{{ $article['content'] }}</p>
+                        <p class="distance">Distance<br> {{ $article['distance'] }}</p>
+                        <p class="duree">Durée du voyage<br> {{ $article['durée'] }}</p>
+                    </section>
+                @endforeach
 
             </main>   
 
- 
-         
     </body>
 </html>
