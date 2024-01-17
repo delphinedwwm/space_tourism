@@ -20,10 +20,10 @@
 
         <div class="enveloppe">
             
-            <main class="contenue_principal">
-                <h1 class="titre_principal">Donc vous voyager dans<br><span>L'ESPACE</span></h1>
+            <main class="contenu_principal">
+                <h1 class="titre_principal">Donc vous voyager dans<br><span>l'espace</span></h1>
                 <p class="speech">Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire&nbsp;!</p> 
-                <a href="/destination"class="cta-button">EXPLORER</a>
+                <a href="{{'destination'}}" class="cta-button">EXPLORER</a>
             </main>  
 
         </div>            

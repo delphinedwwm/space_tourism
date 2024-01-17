@@ -18,8 +18,8 @@
     
         @include('layouts.header')
 
-    <main class="contenue_principal">
-        <h2 class="title"><span class="number_titre_h2">01</span>CHOISISSEZ VOTRE DESTINATION</h2>
+    <main class="contenu_principal">
+        <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
        
         
     </main>   

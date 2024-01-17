@@ -191,7 +191,7 @@
     background-image: url('/public/images/home_background.jpg');
 }
 
-main {
+.contenu_principal {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,39 +204,35 @@ main {
     color: var(--secondary-color);
     line-height: 25px;
     font-size: 15px;
-    margin-top: 20px;
     text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
 }
 
 .titre_principal span {
-    
-}
-p {
-    color: var(--secondary-color);
-    
+    font-family: var(--police-titre1);
+    font-size: 76px;
+    letter-spacing: 0;
 }
 
-h1, 
+p {
+    color: var(--secondary-color);
+    font-family: var(--police-lecture);
+}
+
+.home h1, 
 p {
     font-weight: 400;
 }
 
-h1 {
+.home h1 span {
     color: var(--third-color);
     font-family: var(--police-titre1);
     line-height: 95px;
     font-size: 76px;
-    margin-top: 35px;
+    margin-top: 50px;
 }
-
-h2 {
-    font-family: var(--police-sous-titres);
-    line-height: 19,2px;
-    font-size: 16px;
-    text-align: center;
-}
-
-
 
 .speech {
     width: 82.7%;
@@ -244,7 +240,7 @@ h2 {
 }
 
 .cta-button {
-    position: relative;
+    /* position: relative; */
     margin-top: 100px;
     text-decoration: none;
     background-color: var(--third-color); 
@@ -258,6 +254,7 @@ h2 {
     text-align: center;
     z-index:0;
     font-family: var(--police-titres);
+    font-size: 20px;
 }
 
 
@@ -280,11 +277,11 @@ h2 {
     background-image: url("/public/images/destination_background.png");
 }
 
-.destination .number_titre_h2,
-.crew .number_titre_h2,
-.technology .number_titre_h2 {
+.destination .number_titre_h1,
+.crew .number_titre_h1,
+.technology .number_titre_h1 {
     font-family: var(--police-sous-titre2);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     opacity: 0.25;
     left: 0px;
     top: 0px;
