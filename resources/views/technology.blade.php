@@ -25,11 +25,11 @@
                 
                 @foreach($articles as $article)
                     <figure class="technology">
-                        <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['name'] }}">
+                        <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['objet'] }}">
                     </figure>
                 @endforeach
 
-                <nav class="planetes">
+                <nav class="technology">
                     <ul>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
@@ -40,8 +40,8 @@
 
                 @foreach($articles as $article)
                     <section class="etiquette">
-                        <h2 class="poste_personne">{{ $article['sur_name'] }}</h2>
-                        <h2 class="name_personne">{{ $article['name'] }}</h2>
+                        <h2 class="therminologie">{{ $article['name'] }}</h2>
+                        <h2 class="name_personne">{{ $article['objet'] }}</h2>
                         <p class="description" >{{ $article['description'] }}</p>
                     </section>
                 @endforeach

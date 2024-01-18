@@ -18,6 +18,7 @@
     --primary-color: #0B0D17;  
     --secondary-color: #D0D6F9;
     --third-color: #FFFFFF;
+    --forth-color: #383B4B;
 }
 
 * {
@@ -182,6 +183,8 @@
         margin-right: 0.5rem;
         text-align: center;
         letter-spacing: 2.7px;
+        opacity: 0.25;
+        color: var(--third-color);
     }
 }
 /* ---- fin du css mobile paramètres communs à toutes les pages -------*/
@@ -279,11 +282,11 @@ p {
 .crew .number_titre_h1,
 .technology .number_titre_h1 {
     font-family: var(--police-sous-titre2);
-    color: var(--secondary-color);
+    color: var(--third-color);
     opacity: 0.25;
     width: 18px;
     height: 19px;
-    color: #ffffff;
+    font-size: 19px;
     font-weight: 700;
     letter-spacing: 2.7px;
     padding-right: 1rem;
@@ -293,7 +296,7 @@ p {
 .crew .title,
 .technology .title {
     margin-bottom: 2rem;
-
+    font-size: 19px;
 }
 
 .title {
@@ -307,7 +310,7 @@ p {
 
 /* ---------début css mobile page destination---------------- */
 
-.destination .img_picture {
+.planete img {
     width: 45.33%;
     margin-bottom: 2rem; 
 }
@@ -315,7 +318,6 @@ p {
 .planetes ul {
     display: flex;
     flex-direction: row;
-    
     justify-content: space-around;
     width: 237px;
     margin-bottom: 1rem;
@@ -326,20 +328,22 @@ p {
 }
 
 .planetes a {
+    display: inline;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--secondary-color);
     font-family: var(--police-navigatation);
     font-size: 14px;
     font-weight:400;
+    letter-spacing: 2.7px;
 }
 
 .planetes a:hover {
     text-decoration:solid;
     text-transform: uppercase;
     color: var(--third-color);
-    text-decoration: underline;
-    text-underline-offset: 10px;
+    border-bottom: 3px solid;
+    padding-bottom: 0.5rem;
 }
 
 .nom_planete {
@@ -351,10 +355,10 @@ p {
     margin-bottom: 1rem;
 }
 
-hr {
+.destination hr {
     width: 87.2%; 
     height: 1px;
-    color:"#D0D6F9";
+    background: var(--forth-color);
     align-items:center;
 }
 
@@ -382,6 +386,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    letter-spacing: 2.7px;
 }
 
 .distance span,
@@ -398,40 +403,79 @@ hr {
 }
 
 /* ---------début css mobile page crew ---------------- */
-
 .crews {
-    width: 82.3%;
-    align-items: center;
+    width: 82.7%;
+    margin-left: 8.65%;
+    margin-top: 2rem;
+}
+.crews img {
+    width: 59.2%;
+    margin-left: 19.4%;
 }
 
-hr {
+.crews img {
+    margin-bottom: 0;
+}
+
+.equipage .etiquette {
+    width: 73.07%;
+}
+.equipage hr {
     width: 87.2%; 
     height: 1px;
-    color:"#D0D6F9";
+    color: var(--forth-color);
     align-items:center;
 
 }
+
 .equipage ul {
-    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-self: center; 
-    margin-top: 15px;
-  }
-  
+    width: 88px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.equipage li {
+    list-style: none; 
+    margin-right: 20px; 
+}
+
+.equipage li:last-child {
+    margin-right: 0; /* Supprime l'espacement pour le dernier élément */
+}
+
 .equipage a {
-    text-decoration: none;
-    color: var(--secondary-color);
-    border-radius: 100%;
-    margin: 20px 25px;
-  }
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: var(--third-color) solid 10px;
+    opacity: 0.18;
+    border-radius: 50%;
+}
+
 .equipage a:hover {
-    filter: var(--third-color);
-    transition: 0.1s ease-out;
-  }
+    border: var(--third-color) solid 10px;
+    opacity: 1;
+}
 
+.poste_personne,
+.nom_personne {
+    text-transform: uppercase;
+    font-family: var(--police-titre1);
+    color: var(--third-color);
+}
 
+.poste_personne {
+   font-size: 16px;
+   opacity: 0.5;
+}
+
+.nom_personne {
+    font-size: 24px;
+    margin-bottom: 2rem;
+ }
 /* ---------début css mobile page technology---------------- */
 .technology {
     background-image: url("/public/images/technology_background.png");

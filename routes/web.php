@@ -93,20 +93,20 @@ Route::get('/crew', function () {
 Route::get('/technology', function () {
     $articles = [
         ['picture' => asset("/images/technology/lanceur.png"),
-        'sur_name' => 'La terminologie...',
-        'name' => "Le lanceur",
+        'name' => 'La terminologie...',
+        'objet' => "Le lanceur",
         'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
         ],
 
         ['picture' => asset("/images/technology/spatioport.png"),
-        'sur_name' => 'La terminologie...',
-        'name' => "Le spatioport",
+        'name' => 'La terminologie...',
+        'objet' => "Le spatioport",
         'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
         ],
 
         ['picture' => asset("/images/technology/capsule_spaciale.png"),
-        'sur_name' => 'La terminologie...',
-        'name' => "la capsule spaciale",
+        'name' => 'La terminologie...',
+        'objet' => "la capsule spaciale",
         'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
         ],
     ];
