@@ -42,8 +42,13 @@
                 <section class="etiquette">
                     <h2 class="nom_planete">{{ $article['title'] }}</h2>
                     <p class="description">{{ $article['content'] }}</p>
-                    <p class="distance">Distance<br> {{ $article['distance'] }}</p>
-                    <p class="duree">Durée du voyage<br> {{ $article['durée'] }}</p>
+                    <hr width="87.2%" height=1px color=#D0D6F9 align=center>
+                    <p class="distance" >Distance 
+                        <span>{{ $article['distance'] }}</span>    
+                    </p>
+                    <p class="duree">Durée
+                        <span> {{ $article['durée'] }}</span>
+                    </p>
                 </section>
             @endforeach
 

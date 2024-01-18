@@ -20,13 +20,36 @@
 
         <main class="contenu_principal">
 
-            <h1 class="title"><span class="number_titre_h1">02</span>Rencontrez l'équipage</h1>
 
-               
-            
+        <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
 
+        @foreach($articles as $article)
+            <figure class="crews">
+                <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['function'] }}">
+                
+            </figure>
+        @endforeach
+        
+        <hr>
+
+        <nav class="equipage">
+            <ul>
+                <li><a href="#child-1"></a></li>
+                <li><a href="#child-2"></a></li>
+                <li><a href="#child-3"></a></li>
+                <li><a href="#child-4"></a></li>
+            </ul>
+        </nav>
+
+        @foreach($articles as $article)
+            <section class="etiquette">
+                <h2 class="poste_personne">{{ $article['function'] }}</h2>
+                <h2 class="name_personne">{{ $article['name'] }}</h2>
+                <p class="description">{{ $article['description'] }}</p>
+            </section>
+        @endforeach
+        
         </main>   
-    
                 
     </body>
 </html>
