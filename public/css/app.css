@@ -264,10 +264,11 @@ p {
 
 .destination,
 .crew {
-    background-image: url("/public/images/destination_background.png");
+    background-image: url("/public/images/destination_background.jpg");
 }
 
-section{
+.planete,
+.etiquette {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -306,15 +307,37 @@ section{
 
 /* ---------début css mobile page destination---------------- */
 
-.destination img {
+.img_picture {
     width: 45.33%;
-    margin-bottom: 2rem;
+    margin-bottom: 2rem; 
 }
+
+.planetes ul {
+    display: flex;
+    flex-direction: row;
+    
+    justify-content: space-around;
+    width: 237px;
+    margin-bottom: 1rem;
+}
+
+.planetes li {
+    list-style: none; 
+}
+
+.planetes a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    font-family: var(--police-navigatation);
+    font-weight:400;
+}
+
 .nom_planete {
     color: var(--third-color);
     font-family: var(--police-titre1);
     font-size: 56px;
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 1rem;
 }

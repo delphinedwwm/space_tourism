@@ -19,21 +19,35 @@
     
         @include('layouts.header')
 
-            <main class="contenu_principal">
+        <main class="contenu_principal">
 
-                <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
+            <h1 class="title"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
 
-                @foreach($articles as $article)
-                    <section>
-                        <img src="{{ $article['picture'] }}" alt="{{ $article['title'] }}">
-                        <h2 class="nom_planete">{{ $article['title'] }}</h2>
-                        <p class="description">{{ $article['content'] }}</p>
-                        <p class="distance">Distance<br> {{ $article['distance'] }}</p>
-                        <p class="duree">Durée du voyage<br> {{ $article['durée'] }}</p>
-                    </section>
-                @endforeach
+            @foreach($articles as $article)
+                <figure class="planete">
+                    <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['title'] }}">
+                </figure>
+            @endforeach
 
-            </main>   
+            <nav class="planetes">
+                <ul>
+                    <li><a href="{{ $article['title'] }}" alt="article_lune">Lune</a></li>
+                    <li><a href="{{ $article['title'] }}" alt="article_mars">Mars</a></li>
+                    <li><a href="{{ $article['title'] }}" alt="article_europe">Europe</a></li>
+                    <li><a href="{{ $article['title'] }}" alt="article_titan">Titan</a></li>
+                </ul>
+            </nav>
+
+            @foreach($articles as $article)
+                <section class="etiquette">
+                    <h2 class="nom_planete">{{ $article['title'] }}</h2>
+                    <p class="description">{{ $article['content'] }}</p>
+                    <p class="distance">Distance<br> {{ $article['distance'] }}</p>
+                    <p class="duree">Durée du voyage<br> {{ $article['durée'] }}</p>
+                </section>
+            @endforeach
+
+        </main>   
 
     </body>
 </html>
