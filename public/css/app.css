@@ -417,10 +417,10 @@ p {
     margin-bottom: 0;
 }
 
-.equipage .etiquette {
+.technology .etiquette {
     width: 73.07%;
 }
-.equipage hr {
+.technology hr {
     width: 87.2%; 
     height: 1px;
     color: var(--forth-color);
@@ -428,7 +428,7 @@ p {
 
 }
 
-.equipage ul {
+.technology ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -437,16 +437,16 @@ p {
     margin-bottom: 3rem;
 }
 
-.equipage li {
+.technology li {
     list-style: none; 
     margin-right: 20px; 
 }
 
-.equipage li:last-child {
+.technology li:last-child {
     margin-right: 0; /* Supprime l'espacement pour le dernier élément */
 }
 
-.equipage a {
+.technology a {
     display: inline-block;
     width: 10px;
     height: 10px;
@@ -455,7 +455,7 @@ p {
     border-radius: 50%;
 }
 
-.equipage a:hover {
+.technology a:hover {
     border: var(--third-color) solid 10px;
     opacity: 1;
 }
@@ -481,13 +481,67 @@ p {
     background-image: url("/public/images/technology_background.png");
 }
 
-
-.technology .img_picture {
-   
+.technology {
+    width: 375px;
+    margin-top: 2rem;
+}
+.technology .img {
+    width: 100%;
     height: 170px;
 }
 
+.technology ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 88px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
 
+.technology li {
+    list-style: none; 
+    margin-right: 40px; 
+}
+
+.technology li:last-child {
+    margin-right: 0; /* Supprime l'espacement pour le dernier élément */
+}
+
+.technology a {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    border: var(--third-color) solid 1px;
+    border-radius: 50%;font-family: var(--police-sous-titre1);
+    color: var(--third-color);
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.technology a:hover {
+    border: var(--third-color) solid 20px;
+    color: #0B0D17;
+}
+
+.technologie,
+.objet {
+    text-transform: uppercase;
+    font-family: var(--police-titre1);
+    color: var(--third-color);
+}
+
+.technologie {
+   font-size: 14px;
+   opacity: 0.5;
+}
+
+.objet {
+    font-size: 24px;
+    margin-bottom: 2rem;
+ }
 /*---fin css mobile en globalité---------------------------------*/
 
 

@@ -23,6 +23,7 @@ Route::get('/home', function () {
 
 Route::get('/destination', function () {
     $articles = [
+        // 'lune' =>
         ['picture' => asset("/images/planetes/moon.png"),
         'title' => 'lune',
         'content' => "Voyez notre planète comme vous ne l'avez jamais vue auparavant. Un parfait voayage de détente pour vous aider à prendre du recul et revenir requinquer. Pendant que vous y êtes, plangez-vous dans l'histoire en visitant les sites d'atterrissage de Luna 2 et Apollo 11.",
@@ -60,7 +61,6 @@ Route::get('/destination', function () {
 
 Route::get('/crew', function () {
     $articles = [
-        // 'lune' =>
         ['picture' => asset("/images/crews/commandant.png"),
         'function' => 'commandant',
         'name' => "Douglas Hurley",
@@ -101,13 +101,13 @@ Route::get('/technology', function () {
         ['picture' => asset("/images/technology/spatioport.png"),
         'name' => 'La terminologie...',
         'objet' => "Le spatioport",
-        'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
+        'description' => "Un spatioport ou cosmodrome est un site de lancement (ou de réception) d’engins spatiaux, par analogie avec le port maritime pour les navires ou l’aéroport pour les aéronefs. Basé au célèbre Cap Canaveral, notre spatioport est idéalement situé pour profiter de la rotation de la Terre pour le lancement.",
         ],
 
         ['picture' => asset("/images/technology/capsule_spaciale.png"),
         'name' => 'La terminologie...',
         'objet' => "la capsule spaciale",
-        'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
+        'description' => "Une capsule spatiale est un engin spatial habitable qui utilise une capsule à corps émoussé pour rentrer dans l’atmosphère terrestre sans ailes. Notre capsule est l’endroit où vous passerez votre temps pendant le vol. Il comprend une salle de gym, un cinéma et de nombreuses autres activités pour vous divertir.",
         ],
     ];
 

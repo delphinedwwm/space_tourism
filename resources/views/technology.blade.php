@@ -31,17 +31,16 @@
 
                 <nav class="technology">
                     <ul>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
+                        <li><a href="{{ $article['objet'] }}" alt="article_le_lanceur">1</a></li>
+                        <li><a href="{{ $article['objet'] }}" alt="article_le_spatioport">2</a></li>
+                        <li><a href="{{ $article['objet'] }}" alt="article_la_capsule_spaciale">3</a></li>
                     </ul>
                 </nav>
 
                 @foreach($articles as $article)
                     <section class="etiquette">
                         <h2 class="therminologie">{{ $article['name'] }}</h2>
-                        <h2 class="name_personne">{{ $article['objet'] }}</h2>
+                        <h2 class="objet">{{ $article['objet'] }}</h2>
                         <p class="description" >{{ $article['description'] }}</p>
                     </section>
                 @endforeach
