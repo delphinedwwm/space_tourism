@@ -42,7 +42,7 @@
                 <section class="etiquette">
                     <h2 class="nom_planete">{{ $article['title'] }}</h2>
                     <p class="description">{{ $article['content'] }}</p>
-                    <hr width="87.2%" height=1px color=#D0D6F9 align=center>
+                    <hr>
                     <p class="distance" >Distance 
                         <span>{{ $article['distance'] }}</span>    
                     </p>
