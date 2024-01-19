@@ -14,7 +14,7 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
-    <body class="destination">
+    <body class="crew">
     
         @include('layouts.header')
 
