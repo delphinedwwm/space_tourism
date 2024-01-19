@@ -458,7 +458,7 @@ width: 87.2%;
     width: 375px;
     margin-top: 2rem; 
     max-height: 170px;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .body_technology .etiquette {
@@ -481,7 +481,6 @@ width: 87.2%;
 .nav_technology a {
     display: flex; 
     align-items: center;
-    
     width: 40px;
     height: 40px;
     border: var(--third-color) solid 1px;
@@ -494,8 +493,6 @@ width: 87.2%;
     justify-content: center;
     /* margin-right: 2rem; */
 }
-
-
 
 .nav_technology a:hover {
     border: var(--third-color) solid 20px;
