@@ -190,8 +190,9 @@
 /* ---- fin du css mobile paramètres communs à toutes les pages -------*/
 
 /*------début css mobile page d'accueil ------*/
-.home {
-    background-image: url('/public/images/home_background.jpg');
+.accueil {
+    background-image: url('/public/images/accueil_background.jpg');
+    background-repeat: no-repeat;
 }
 
 .contenu_principal {
@@ -224,12 +225,12 @@ p {
     font-family: var(--police-lecture);
 }
 
-.home h1, 
+.accueil h1, 
 p {
     font-weight: 400;
 }
 
-.home h1 span {
+.accueil h1 span {
     color: var(--third-color);
     font-family: var(--police-titre1);
     line-height: 95px;
@@ -261,13 +262,16 @@ p {
 }
 
 
+
+
 /*------fin css mobile page d'accueil--------------------------*/
 
 /*----- css commun aux pages destination, crew et technology ----------------------*/
 
 .destination,
-.crew {
+.equipage {
     background-image: url("/public/images/destination_background.jpg");
+    background-repeat: no-repeat;
 }
 
 .planete,
@@ -279,8 +283,8 @@ p {
 }
 
 .destination .number_titre_h1,
-.crew .number_titre_h1,
-.body_technology .number_titre_h1 {
+.equipage .number_titre_h1,
+.technologie .number_titre_h1 {
     font-family: var(--police-sous-titre2);
     color: var(--third-color);
     opacity: 0.25;
@@ -292,14 +296,7 @@ p {
     padding-right: 1rem;
 }
 
-.destination .title,
-.crew .title,
-.body_technology .title {
-    margin-bottom: 2rem;
-    font-size: 19px;
-}
-
-.title {
+.titre {
     font-family: var(--police-sous-titre2);
     color: var(--third-color);
     text-transform: uppercase;
@@ -362,7 +359,7 @@ p {
     align-items:center;
 }
 
-.description {
+.voyage {
     width: 87.2%;
     text-align: center;
     margin-bottom: 3rem;
@@ -402,31 +399,32 @@ p {
     text-align: center;
 }
 
-/* ---------début css mobile page crew ---------------- */
-.crew {
+/* ---------début css mobile page equipage ---------------- */
+.equipage {
     width: 82.7%;
     margin-left: 8.65%;
     margin-top: 2rem;
 }
-.crew img {
-    width: 59.2%;
-    margin-left: 19.4%;
+
+.image_equipage {
+    max-width: 100%;
+    /* margin-left: 19.4%; */
     margin-bottom: 0;
 }
 
-.crew hr {
+.equipage hr {
     width: 87.2%; 
     height: 1px;
     background: var(--forth-color);
     align-items:center;
 }
 
-.crew .etiquette {
+.equipage .etiquette {
     width: 73.07%;
 }
 
 
-.poste_personne,
+.poste,
 .nom_personne {
     text-align: center;
     text-transform: uppercase;
@@ -434,7 +432,7 @@ p {
     color: var(--third-color);
 }
 
-.poste_personne {
+.poste {
    font-size: 16px;
    opacity: 0.5;
 }
@@ -444,16 +442,17 @@ p {
     margin-bottom: 2rem;
  }
 
-.crew .description {
+.equipage .fonction {
 width: 87.2%;
 }
 
 /* ---------début css mobile page technology---------------- */
-.body_technology {
+.technologie {
     background-image: url("/public/images/technology_background.png");
+
 }
 
-.body_technology .img {
+.technologie .img {
     margin-top: 2rem;
     width: 375px;
     margin-top: 2rem; 
@@ -461,11 +460,11 @@ width: 87.2%;
     /* overflow: hidden; */
 }
 
-.body_technology .etiquette {
+.technologie .etiquette {
     width: 87.2%;
 }
 
-.nav_technology ul {
+.nav_technologie ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -473,12 +472,12 @@ width: 87.2%;
     margin-bottom: 3rem;
 }
 
-.nav_technology li {
+.nav_technologie li {
     list-style: none; 
     margin-right: 0px; 
 }
 
-.nav_technology a {
+.nav_technologie a {
     display: flex; 
     align-items: center;
     width: 40px;
@@ -494,7 +493,7 @@ width: 87.2%;
     /* margin-right: 2rem; */
 }
 
-.nav_technology a:hover {
+.nav_technologie a:hover {
     border: var(--third-color) solid 20px;
     color: #0B0D17;
 }
@@ -522,7 +521,7 @@ width: 87.2%;
     font-family: var(--police-titre1);
 }
 
-.etiquette .description {
+.etiquette .fonction {
     width: 100%;
 }
 
@@ -532,7 +531,7 @@ width: 87.2%;
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
 
-
+}
 
 
 @media screen and (min-width : 769px) and (max-width : 1440px) {
@@ -551,6 +550,6 @@ width: 87.2%;
     }  */
     }
       
-}
+
 
  

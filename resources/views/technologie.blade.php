@@ -15,21 +15,21 @@
       
     </head>
 
-    <body class="body_technology">
+    <body class="technologie">
     
         @include('layouts.header')
 
             <main class="contenu_principal">
                 
-                <h1 class="title"><span class="number_titre_h1">03</span>Lanceur spatial 101</h1>
+                <h1 class="titre"><span class="number_titre_h1">03</span>Lanceur spatial 101</h1>
                 
                 @foreach($articles as $article)
-                    <figure class="img_technology">
+                    <figure class="img_technologie">
                         <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['objet'] }}">
                     </figure>
                 @endforeach
 
-                <nav class="nav_technology">
+                <nav class="nav_technologie">
                     <ul>
                         <li><a href="{{ $article['objet'] }}" alt="article_le_lanceur">1</a></li>
                         <li><a href="{{ $article['objet'] }}" alt="article_le_spatioport">2</a></li>

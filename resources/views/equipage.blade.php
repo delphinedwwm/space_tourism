@@ -14,38 +14,38 @@
         @vite(['public/css/app.css', 'public/js/app.js'])
       
     </head>
-    <body class="crew">
+    <body class="equipage">
     
         @include('layouts.header')
 
         <main class="contenu_principal">
 
 
-        <h1 class="title"><span class="number_titre_h1">02</span>rencontrez l'équipage</h1>
+        <h1 class="titre"><span class="number_titre_h1">02</span>rencontrez l'équipage</h1>
 
         @foreach($articles as $article)
-            <figure class="crews">
-                <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['function'] }}">
+            <figure class="image_equipage">
+                <img src="{{ $article['image'] }}" class="equipier" alt="{{ $article['poste'] }}">
                 
             </figure>
         @endforeach
         
         <hr>
 
-        <nav class="equipage">
+        <nav class="equipe">
             <ul>
-                <li><a href="{{ $article['function'] }}" alt="article_commandant"></a></li>
-                <li><a href="{{ $article['function'] }}" alt="article_spécialiste_mission"></a></li>
-                <li><a href="{{ $article['function'] }}" alt="article_pilote"></a></li>
-                <li><a href="{{ $article['function'] }}" alt="article_ingenieure"></a></li>
+                <li><a href="{{ $article['poste'] }}" alt="article_commandant"></a></li>
+                <li><a href="{{ $article['poste'] }}" alt="article_spécialiste_mission"></a></li>
+                <li><a href="{{ $article['poste'] }}" alt="article_pilote"></a></li>
+                <li><a href="{{ $article['poste'] }}" alt="article_ingenieure"></a></li>
             </ul>
         </nav>
 
         @foreach($articles as $article)
             <section class="etiquette">
-                <h2 class="poste_personne">{{ $article['function'] }}</h2>
-                <h3 class="nom_personne">{{ $article['name'] }}</h3>
-                <p class="description">{{ $article['description'] }}</p>
+                <h2 class="poste">{{ $article['poste'] }}</h2>
+                <h3 class="nom_personne">{{ $article['nom'] }}</h3>
+                <p class="fonction">{{ $article['fonction'] }}</p>
             </section>
         @endforeach
         

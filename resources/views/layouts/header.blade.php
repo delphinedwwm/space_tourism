@@ -14,10 +14,10 @@
 
     <nav id="menu">
         <ul>
-            <li><a href="{{route('home')}}" alt="page_accueil"><span class="number">00</span>Home</a></li>
+            <li><a href="{{route('accueil')}}" alt="page_accueil"><span class="number">00</span>Accueil</a></li>
             <li><a href="{{route('destination')}}" alt="page_destination"><span class="number">01</span>Destination</a></li>
-            <li><a href="{{route('crew')}}" alt="page_crew"><span class="number">02</span>Crew</a></li>
-            <li><a href="{{route('technology')}}" alt="page_technology"><span class="number">03</span>Technology</a></li>
+            <li><a href="{{route('equipage')}}" alt="page_equipage"><span class="number">02</span>Equipage</a></li>
+            <li><a href="{{route('technologie')}}" alt="page_technologie"><span class="number">03</span>Technologie</a></li>
         </ul>
     </nav>
            
