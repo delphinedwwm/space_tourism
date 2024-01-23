@@ -25,7 +25,7 @@
                 
                 @foreach($articles as $article)
                     <figure class="img_technologie">
-                        <img src="{{ $article['picture'] }}" class="img_picture" alt="{{ $article['objet'] }}">
+                        <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
                     </figure>
                 @endforeach
 
@@ -39,7 +39,7 @@
 
                 @foreach($articles as $article)
                     <section class="etiquette">
-                        <h2 class="therminologie">{{ $article['name'] }}</h2>
+                        <h2 class="therminologie">{{ $article['nom'] }}</h2>
                         <h2 class="objet">{{ $article['objet'] }}</h2>
                         <p class="description" >{{ $article['description'] }}</p>
                     </section>

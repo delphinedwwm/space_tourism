@@ -67,7 +67,7 @@ Route::get('/equipage', function () {
         'fonction' => "Douglas Gerald Hurley est un ingénieur américain, un ancien pilote du Coprs des Marines et un ancien astronaute de la NASA. Il s'est lancé dans l'espace pour la troisième fois en tant que commandant du vaissaux Crew Dragon Demo-2.",
         ],
 
-        ['image' => asset("/images/equipage/specialist.png"),
+        ['image' => asset("/images/equipage/specialiste.png"),
         'poste' => 'spécialiste de mission',
         'nom' => "Mark Shuttleworth",
         'fonction' => "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",

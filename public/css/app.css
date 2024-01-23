@@ -30,10 +30,10 @@
 
 /*-----début css mobile paramètres communs à toutes les pages ---------------*/
 
-.home,
+.accueil,
 .destination,
-.crew,
-.technology {
+.equipage,
+.technologie {
     background-size: cover;
     background-repeat:no-repeat;
     display: flex;
@@ -266,7 +266,7 @@ p {
 
 /*------fin css mobile page d'accueil--------------------------*/
 
-/*----- css commun aux pages destination, crew et technology ----------------------*/
+/*----- css commun aux pages destination, equipage et technologie ----------------------*/
 
 .destination,
 .equipage {
@@ -400,15 +400,16 @@ p {
 }
 
 /* ---------début css mobile page equipage ---------------- */
-.equipage {
+.image_equipage {
     width: 82.7%;
     margin-left: 8.65%;
     margin-top: 2rem;
 }
 
-.image_equipage {
-    max-width: 100%;
-    /* margin-left: 19.4%; */
+
+.equipier {
+    width: 59.2%;
+    margin-left: 19.4%;
     margin-bottom: 0;
 }
 
@@ -423,6 +424,43 @@ p {
     width: 73.07%;
 }
 
+.nav_equipe {
+    left: 119px;
+    top: 0px;
+    width: 88px;
+    height: 10px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav_equipe ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* margin-top: 3rem;
+    margin-bottom: 3rem; */
+}
+
+.nav_equipe li {
+    list-style: none; 
+    margin-right: 0px; 
+}
+
+.nav_equipe a {
+    display: flex; 
+    align-items: center;
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.18);
+    background-blend-mode: normal;
+    border-radius: 50%;
+}
+
+.nav_equipe a:hover {
+    /* border: var(--third-color) solid 20px; */
+    background: var(--third-color);
+}
+
 
 .poste,
 .nom_personne {
@@ -435,21 +473,30 @@ p {
 .poste {
    font-size: 16px;
    opacity: 0.5;
+   margin-top: 3rem;
+   font-weight: 400;
 }
 
 .nom_personne {
     font-size: 24px;
     margin-bottom: 2rem;
+    font-weight: 400;
  }
 
 .equipage .fonction {
-width: 87.2%;
+    width: 87.2%;
+    color: #d0d6f9;
+    font-family: var(--police-lecture);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center
 }
 
 /* ---------début css mobile page technology---------------- */
 .technologie {
-    background-image: url("/public/images/technology_background.png");
-
+    background-image: url("/public/images/technologie_background.png");
+    background-repeat: no-repeat;
 }
 
 .technologie .img {

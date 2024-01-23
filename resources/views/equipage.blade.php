@@ -32,7 +32,7 @@
         
         <hr>
 
-        <nav class="equipe">
+        <nav class="nav_equipe">
             <ul>
                 <li><a href="{{ $article['poste'] }}" alt="article_commandant"></a></li>
                 <li><a href="{{ $article['poste'] }}" alt="article_spécialiste_mission"></a></li>
