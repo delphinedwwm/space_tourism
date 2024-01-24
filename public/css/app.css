@@ -308,6 +308,7 @@ p {
 .planete img {
     width: 45.33%;
     margin-bottom: 2rem; 
+    margin-top: 2rem;
 }
 
 .planetes ul {
@@ -493,7 +494,7 @@ p {
 
 /* ---------début css mobile page technologie---------------- */
 .technologie {
-    background-image: url("/public/images/technologie_background.png");
+    background-image: url("/public/images/technologie_background.jpg");
 }
 
 .img_tech  {
@@ -557,6 +558,7 @@ p {
     font-size: 14px;
     opacity: 0.5;
     color: var(--secondary-color);
+    margin-top: 2rem;
     margin-bottom: 0.5rem;
 }
 
@@ -565,10 +567,15 @@ p {
     margin-bottom: 2rem;
     color: var(--third-color);
     font-family: var(--police-titre1);
+    font-weight: 400;
 }
 
 .etiquette .fonction {
     width: 100%;
+}
+
+.description {
+    text-align: center;
 }
 
 /*---fin css mobile en globalité---------------------------------*/
@@ -577,12 +584,19 @@ p {
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
 
-/* #burger-menu {
-    visibility: hidden;
+#title {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 66px;
+    height: 16.8px;
+    color: #ffffff;
+    font-family: "Barlow Condensed";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 2.36px;
     }
-.menu {
-    visibility: visible;
-    } */
 }
 
 
