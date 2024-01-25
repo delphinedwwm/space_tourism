@@ -23,11 +23,9 @@
                 
                 <h1 class="titre"><span class="number_titre_h1">03</span>Lanceur spatial 101</h1>
                 
-                @foreach($articles as $article)
-                    <figure class="img_technologie">
-                        <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
-                    </figure>
-                @endforeach
+                <figure class="img_technologie">
+                    <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
+                </figure>
 
                 <nav class="nav_technologie">
                     <ul>
@@ -37,13 +35,11 @@
                     </ul>
                 </nav>
 
-                @foreach($articles as $article)
-                    <section class="etiquette">
-                        <h2 class="therminologie">{{ $article['nom'] }}</h2>
-                        <h2 class="objet">{{ $article['objet'] }}</h2>
-                        <p class="description" >{{ $article['description'] }}</p>
-                    </section>
-                @endforeach
+                <section class="etiquette">
+                    <h2 class="therminologie">{{ $article['nom'] }}</h2>
+                    <h2 class="objet">{{ $article['objet'] }}</h2>
+                    <p class="description" >{{ $article['description'] }}</p>
+                </section>
 
             </main>   
             

@@ -14,10 +14,10 @@
 
     <nav id="menu">
         <ul>
-            <li><a href="{{route('accueil')}}" alt="page_accueil"><span class="number">00</span>Accueil</a></li>
-            <li><a href="{{route('destination')}}" alt="page_destination"><span class="number">01</span>Destination</a></li>
-            <li><a href="{{route('equipage')}}" alt="page_equipage"><span class="number">02</span>Equipage</a></li>
-            <li><a href="{{route('technologie')}}" alt="page_technologie"><span class="number">03</span>Technologie</a></li>
+            <li><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>Accueil</a></li>
+            <li><a href="{{route('destination', ['planete'=>'lune'])}}" title="page_destination"><span class="number">01</span>Destination</a></li>
+            <li><a href="{{route('equipage', ['equipe'=>'commandant'])}}" title="page_equipage"><span class="number">02</span>Equipage</a></li>
+            <li><a href="{{route('technologie', ['techno'=>'le lanceur'])}}" title="page_technologie"><span class="number">03</span>Technologie</a></li>
         </ul>
     </nav>
            

@@ -23,13 +23,11 @@
 
         <h1 class="titre"><span class="number_titre_h1">02</span>rencontrez l'équipage</h1>
 
-        @foreach($articles as $article)
-            <figure class="image_equipage">
-                <img src="{{ $article['image'] }}" class="equipier" alt="{{ $article['poste'] }}">
-                
-            </figure>
-        @endforeach
-        
+        <figure class="image_equipage">
+            <img src="{{ $article['image'] }}" class="equipier" alt="{{ $article['poste'] }}">
+            
+        </figure>
+    
         <hr>
 
         <nav class="nav_equipe">
@@ -41,13 +39,12 @@
             </ul>
         </nav>
 
-        @foreach($articles as $article)
-            <section class="etiquette">
-                <h2 class="poste">{{ $article['poste'] }}</h2>
-                <h3 class="nom_personne">{{ $article['nom'] }}</h3>
-                <p class="fonction">{{ $article['fonction'] }}</p>
-            </section>
-        @endforeach
+        <section class="etiquette">
+            <h2 class="poste">{{ $article['poste'] }}</h2>
+            <h3 class="nom_personne">{{ $article['nom'] }}</h3>
+            <p class="fonction">{{ $article['fonction'] }}</p>
+        </section>
+
         
         </main>   
                 

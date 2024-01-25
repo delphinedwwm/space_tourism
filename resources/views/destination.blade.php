@@ -22,13 +22,11 @@
         <main class="contenu_principal">
 
             <h1 class="titre"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
-
-            @foreach($articles as $article)
-                <figure class="planete">
-                    <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $article['titre'] }}">
-                </figure>
-            @endforeach
-
+            
+            <figure class="planete">
+                <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $article['titre'] }}">
+            </figure>
+        
             <nav class="planetes">
                 <ul>
                     <li><a href="{{ $article['titre'] }}" alt="article_lune">Lune</a></li>
@@ -38,20 +36,18 @@
                 </ul>
             </nav>
 
-            @foreach($articles as $article)
-                <section class="etiquette">
-                    <h2 class="nom_planete">{{ $article['titre'] }}</h2>
-                    <p class="voyage">{{ $article['voyage'] }}</p>
-                    <hr>
-                    <p class="distance" >Distance 
-                        <span>{{ $article['distance'] }}</span>    
-                    </p>
-                    <p class="duree">Durée
-                        <span> {{ $article['durée'] }}</span>
-                    </p>
-                </section>
-            @endforeach
-
+            <section class="etiquette">
+                <h2 class="nom_planete">{{ $article['titre'] }}</h2>
+                <p class="voyage">{{ $article['voyage'] }}</p>
+                <hr>
+                <p class="distance" >Distance 
+                    <span>{{ $article['distance'] }}</span>    
+                </p>
+                <p class="duree">Durée
+                    <span> {{ $article['durée'] }}</span>
+                </p>
+            </section>
+    
         </main>   
 
     </body>
