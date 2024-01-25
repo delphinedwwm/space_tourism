@@ -110,6 +110,6 @@ class PageController extends Controller
 
         return view('technologie', [
             'article' => $articles[$techno]
-        ]);
+        ]); 
         }
 }
