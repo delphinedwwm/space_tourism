@@ -29,10 +29,10 @@
         
             <nav class="planetes">
                 <ul>
-                    <li><a href="{{ $article['titre'] }}" alt="article_lune">Lune</a></li>
-                    <li><a href="{{ $article['titre'] }}" alt="article_mars">Mars</a></li>
-                    <li><a href="{{ $article['titre'] }}" alt="article_europe">Europe</a></li>
-                    <li><a href="{{ $article['titre'] }}" alt="article_titan">Titan</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune">Lune</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars">Mars</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe">Europe</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan">Titan</a></li>
                 </ul>
             </nav>
 

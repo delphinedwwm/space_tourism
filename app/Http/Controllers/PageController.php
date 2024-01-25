@@ -52,28 +52,28 @@ class PageController extends Controller
 
     public function equipage($equipe) {
         $articles = [
-            'le commandant' =>
+            'commandant' =>
                 ['image' => asset("/images/equipage/commandant.png"),
                 'poste' => 'commandant',
                 'nom' => "Douglas Hurley",
                 'fonction' => "Douglas Gerald Hurley est un ingénieur américain, un ancien pilote du Coprs des Marines et un ancien astronaute de la NASA. Il s'est lancé dans l'espace pour la troisième fois en tant que commandant du vaissaux Crew Dragon Demo-2.",
                 ],
     
-            'le spécialiste de mission' =>
+            'specialiste' =>
                 ['image' => asset("/images/equipage/specialiste.png"),
                 'poste' => 'spécialiste de mission',
                 'nom' => "Mark Shuttleworth",
                 'fonction' => "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
                 ],
     
-            'le pilote' =>
+            'pilote' =>
                 ['image' => asset("/images/equipage/pilote.png"),
                 'poste' => 'pilote',
                 'nom' => "Victor Glover",
                 'fonction' => "Pilote du premier vol opérationnel du SpaceX Crew Dragon à destination de la Station Spatiale Internationale. Glover est commandant dans la marine américaine, où il pilote un F/A-18. Il a été membre de l’équipage de l’Expedition 64 et a servi comme ingénieur de vol des systèmes de station.",
                 ],
     
-            "l'ingenieur de vol" =>
+            'ingenieur' =>
                 ['image' => asset("/images/equipage/ingenieure.png"),
                 'poste' => 'ingenieur de vol',
                 'nom' => "Anousheh Ansari",
@@ -93,14 +93,14 @@ class PageController extends Controller
                 'description' => "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
                 ],
 
-            'spatiopor' =>
+            'spatioport' =>
                 ['image' => asset("/images/technologie/spatioport.png"),
                 'nom' => 'La terminologie...',
                 'objet' => "Le spatioport",
                 'description' => "Un spatioport ou cosmodrome est un site de lancement (ou de réception) d’engins spatiaux, par analogie avec le port maritime pour les navires ou l’aéroport pour les aéronefs. Basé au célèbre Cap Canaveral, notre spatioport est idéalement situé pour profiter de la rotation de la Terre pour le lancement.",
                 ],
 
-            'capsule_spaciale' =>    
+            'capsule' =>    
                 ['image' => asset("/images/technologie/capsule_spaciale.png"),
                 'nom' => 'La terminologie...',
                 'objet' => "la capsule spaciale",

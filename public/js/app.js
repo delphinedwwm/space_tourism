@@ -1,7 +1,7 @@
 // js burger
-var burgerMenu = document.getElementById('burger-menu');
+var burgerMenu = document.querySelector('.burger-menu');
 
-var overlay = document.getElementById('menu');
+var overlay = document.querySelector('.menu');
 
 burgerMenu.addEventListener('click', function() {
   this.classList.toggle("close");

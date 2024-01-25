@@ -29,7 +29,7 @@
 
                 <nav class="nav_technologie">
                     <ul>
-                        <li><a href="{{ $article['objet'] }}" alt="article_le_lanceur">1</a></li>
+                        <li><a href="{{ route('equipage', ['equipe'=>'ingenieur'])}}" alt="article_le_lanceur">1</a></li>
                         <li><a href="{{ $article['objet'] }}" alt="article_le_spatioport">2</a></li>
                         <li><a href="{{ $article['objet'] }}" alt="article_la_capsule_spaciale">3</a></li>
                     </ul>

@@ -32,10 +32,10 @@
 
         <nav class="nav_equipe">
             <ul>
-                <li><a href="{{ $article['poste'] }}" alt="article_commandant"></a></li>
-                <li><a href="{{ $article['poste'] }}" alt="article_spécialiste_mission"></a></li>
-                <li><a href="{{ $article['poste'] }}" alt="article_pilote"></a></li>
-                <li><a href="{{ $article['poste'] }}" alt="article_ingenieure"></a></li>
+                <li><a href="{{ route('equipage', ['equipe'=>'commandant']) }}" alt="article_commandant"></a></li>
+                <li><a href="{{ route('equipage', ['equipe'=>'specialiste']) }}" alt="article_spécialiste_mission"></a></li>
+                <li><a href="{{ route('equipage', ['equipe'=>'pilote']) }}" alt="article_pilote"></a></li>
+                <li><a href="{{ route('equipage', ['equipe'=>'ingenieur']) }}" alt="article_ingenieure"></a></li>
             </ul>
         </nav>
 
