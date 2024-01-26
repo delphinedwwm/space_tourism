@@ -595,7 +595,16 @@ p {
     .burger-menu  {
         display: none ;
     }
-   .contenu_principal {
+
+    .menu {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenu_principal {
         width: 59.9%;
         margin-left: 20.55%;
     }
@@ -615,6 +624,14 @@ p {
         /* overflow: hidden; */
     }
 
+    .menu {
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        display: flex;
+        flex-direction: row;
+    }
+    
     .contenu_principal {
         display: flex;
         flex-direction: row;
@@ -629,7 +646,6 @@ p {
     .accueil h1,
     .accueil p {
         max-width: 45.28%;
-        margin-right: 10rem;
     }
     .cta-button {
         width: 274px;
