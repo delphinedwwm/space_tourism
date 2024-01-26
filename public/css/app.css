@@ -53,6 +53,7 @@
 
 .logo {
     position: absolute;
+    
 }
 
 /* ---début css burger normal et au survol------------ */
@@ -583,7 +584,46 @@ p {
 
 @media screen and (min-width : 376px) and (max-width : 768px) {
     /*  paramètres généraux ------------------------- */
-    
+    .entete-page {
+        width: 94.8%;
+        height: 96px;
+        margin-left: 3rem;
+        padding: 0;
+        
+    }
+    .burger-menu  {
+        display: none ;
+    }
+   
+    .menu {
+        visibility: visible;
+        width: 58.59%;
+        opacity: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items:center;
+        
+        
+        
+    }
+
+    .menu ul {
+        display: flex;
+       
+    }
+
+    .menu li {
+        /* flex-direction: row; */
+    }
+    .menu a {
+        flex-direction: row;
+        font-size: 14px;
+        font-family: var(--police-sous-titre2);
+        /* margin: 0; */
+    }
+    .number {
+        display: none;
+    }
     /* fin paramêtre généraux ------------------------------ */
 
     /* accueil ---------------------------- */
@@ -592,18 +632,7 @@ p {
         /* overflow: hidden; */
     }
 
-    .burger-menu  {
-        display: none ;
-    }
-
-    .menu {
-        visibility: visible;
-        opacity: 1;
-        position: relative;
-        display: flex;
-        flex-direction: row;
-    }
-
+    
     .contenu_principal {
         width: 59.9%;
         margin-left: 20.55%;
