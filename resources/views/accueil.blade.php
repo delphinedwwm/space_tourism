@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html xmlns:og="http://ogp.me/ns#" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,12 +7,26 @@
         <title>Space Tourism</title>
 
         <!-- Fonts -->
-        <!-- <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> -->
+        
 
         <!-- Styles -->
+
         @vite(['public/css/app.css', 'public/js/app.js'])
-      
+
+        <!-- balises Open Graph
+
+        <meta property="og:title" content="Article sur l'Open Graph par Referenseo" />
+
+        <meta property="og:type" content="article" />
+
+        <meta property="og:url" content="http://www.yakaferci.com/open-graph/" />
+
+        <meta property="og:image" content="http://referenseo/images/open-graph.jpg" />
+
+        <meta property="og:site_name" content="Agence de référencement Referenseo" />
+
+        ---------------------------------------------------->
+
     </head>
 
     <body class="accueil">

@@ -12,6 +12,8 @@
         <span></span>
     </div>
 
+    <hr>
+
     <nav class="menu">
         <ul>
             <li><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>Accueil</a></li>

@@ -128,6 +128,10 @@
 }
 /* ------fin css burger normal et au survol ------------ */
 
+.entete-page hr {
+    display: none;
+}
+
 .menu {
     z-index: 1;
     min-height: 100%;
@@ -546,7 +550,7 @@ p {
     color: #0B0D17;
 }
 
-.therminologie,
+.terminologie,
 .objet {
     text-transform: uppercase;
     font-family: var(--police-sous-titre2);
@@ -555,7 +559,7 @@ p {
     text-align: center;
 }
 
-.therminologie {
+.terminologie {
     font-size: 14px;
     opacity: 0.5;
     color: var(--secondary-color);
@@ -582,29 +586,45 @@ p {
 /*---fin css mobile en globalité---------------------------------*/
 
 
-@media screen and (min-width : 376px) and (max-width : 768px) {
+
+ 
+
+@media screen and (min-width : 375px) and (max-width : 1440px) {
     /*  paramètres généraux ------------------------- */
+    .accueil {
+        background-image: url("/public/images/bureau_background/bureau_accueil_background.jpg");
+        /* overflow: hidden; */
+    }
+
     .entete-page {
         width: 94.8%;
         height: 96px;
         margin-left: 3rem;
-        padding: 0;
-        
+        padding: 0;        
     }
+
     .burger-menu  {
         display: none ;
     }
-   
+    
+    .entete-page hr {
+        display: block;
+        border: var(--third-color) solid 1px;
+        opacity: 0.4;
+        width: 32.84%;
+        margin-right: 59.38%;
+        
+    }
+
     .menu {
         visibility: visible;
         width: 58.59%;
         opacity: 1;
         display: flex;
         justify-content: space-between;
-        align-items:center;
-        
-        
-        
+        align-items:center;  
+        flex-direction: row;
+        backdrop-filter: blur(25px); /*flou à l'arrière-plan de l'élément*/
     }
 
     .menu ul {
@@ -613,54 +633,20 @@ p {
     }
 
     .menu li {
-        /* flex-direction: row; */
+        flex-direction: row;
     }
+
     .menu a {
         flex-direction: row;
         font-size: 14px;
         font-family: var(--police-sous-titre2);
         /* margin: 0; */
     }
+
     .number {
-        display: none;
-    }
-    /* fin paramêtre généraux ------------------------------ */
-
-    /* accueil ---------------------------- */
-    .accueil {
-        background-image: url("/public/images/tablette_background/tabelette_accueil_background.jpg");
-        /* overflow: hidden; */
-    }
-
-    
-    .contenu_principal {
-        width: 59.9%;
-        margin-left: 20.55%;
-    }
-
-
-} 
- 
-
-@media screen and (min-width : 769px) and (max-width : 1440px) {
-    /*  paramètres généraux ------------------------- */
-    .burger-menu  {
-        display: none ;
-    }
-
-    .accueil {
-        background-image: url("/public/images/bureau_background/bureau_accueil_background.jpg");
-        /* overflow: hidden; */
-    }
-
-    .menu {
-        visibility: visible;
         opacity: 1;
-        position: relative;
-        display: flex;
-        flex-direction: row;
     }
-    
+
     .contenu_principal {
         display: flex;
         flex-direction: row;
@@ -668,6 +654,7 @@ p {
         text-align: center;
         flex-wrap: wrap;
     }
+
     .speech {
         order: 1; /* Ajuste l'ordre pour placer le paragraphe après le titre */
     }
@@ -676,6 +663,7 @@ p {
     .accueil p {
         max-width: 45.28%;
     }
+
     .cta-button {
         width: 274px;
         height: 274px;
@@ -684,5 +672,30 @@ p {
     }
       
 
-
+    @media screen and (min-width : 376px) and (max-width : 768px) {
+        /*  paramètres généraux ------------------------- */
+       
+        .entete-page hr {
+            display: none;
+        }
+        .number {
+            display: none;
+        }
+    
+        /* fin paramêtre généraux ------------------------------ */
+    
+        /* accueil ---------------------------- */
+    
+        .accueil {
+            background-image: url("/public/images/tablette_background/tabelette_accueil_background.jpg");
+            /* overflow: hidden; */
+        }
+    
+        .contenu_principal {
+            width: 59.9%;
+            margin-left: 20.55%;
+        }
+    
+    
+    } 
  

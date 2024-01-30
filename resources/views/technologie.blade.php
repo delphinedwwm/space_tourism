@@ -36,7 +36,7 @@
                 </nav>
 
                 <section class="etiquette">
-                    <h2 class="therminologie">{{ $article['nom'] }}</h2>
+                    <h2 class="terminologie">{{ $article['nom'] }}</h2>
                     <h2 class="objet">{{ $article['objet'] }}</h2>
                     <p class="description" >{{ $article['description'] }}</p>
                 </section>
