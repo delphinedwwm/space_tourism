@@ -217,33 +217,26 @@
     letter-spacing: 2.7px;
 }
 
-.titre_principal span {
-    font-family: var(--police-titre1);
-    font-size: 76px;
-    letter-spacing: 0;
-}
 
-p {
-    color: var(--secondary-color);
-    font-family: var(--police-lecture);
-}
-
-.accueil h1, 
-p {
+.accueil h1 {
     font-weight: 400;
 }
 
 .accueil h1 span {
     color: var(--third-color);
-    font-family: var(--police-titre1);
     line-height: 95px;
-    font-size: 76px;
     margin-top: 50px;
+    font-family: var(--police-titre1);
+    font-size: 76px;
+    letter-spacing: 0;
 }
 
 .speech {
     width: 82.7%;
     text-align: justify;
+    color: var(--secondary-color);
+    font-family: var(--police-lecture);
+    font-weight: 400;
 }
 
 .cta-button {

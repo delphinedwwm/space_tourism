@@ -11,8 +11,6 @@
 
         <!-- balises Open Graph -->
 
-       
-
         <meta property="og:title" content="Space Tourism" />
 
         <meta property="og:type" content="article" />
@@ -27,7 +25,7 @@
 
     </head>
 
-    <body class="accueil" aria-live="polite"> <!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->> 
+    <body class="accueil" aria-live="polite"> <!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
 
         @include('layouts.header')
 
