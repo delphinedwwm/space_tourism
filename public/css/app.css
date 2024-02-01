@@ -202,9 +202,8 @@
 .contenu_principal {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 87,2% ;
+    
 }
 
 .titre_principal {
@@ -261,7 +260,7 @@ p {
     line-height: 150px; /* texte centé en hauteur si une seule ligne de texte et que le conteneur est un element texte*/
     text-align: center;
     z-index:0;
-    font-family: var(--police-titres);
+    font-family: var(--police-titre1);
     font-size: 20px;
 }
 
@@ -513,7 +512,7 @@ p {
     width: 87.2%;
 }
 
-.nav_technoligie {
+.nav_technologie {
     width: 51.2%;
 }
 .nav_technologie ul {
@@ -522,11 +521,17 @@ p {
     justify-content: space-between;
     margin-top: 3rem;
     margin-bottom: 3rem;
+    width: 100%;
 }
 
 .nav_technologie li {
     list-style: none; 
     margin-right: 0px; 
+}
+
+.nav_technologie li:last-child {
+    margin-right: 0;
+
 }
 
 .nav_technologie a {
@@ -542,7 +547,7 @@ p {
     text-decoration: none;
     text-align: center;
     justify-content: center;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
 }
 
 .nav_technologie a:hover {
@@ -585,11 +590,47 @@ p {
 
 /*---fin css mobile en globalité---------------------------------*/
 
+@media screen and (min-width : 460px) {
+    /*  paramètres généraux ------------------------- */
+    
+    .entete-page hr {
+        display: none;
+    }
+    .number {
+        display: none;
+    }
 
+    /* fin paramêtre généraux ------------------------------ */
 
- 
+    /* accueil ---------------------------- */
 
-@media screen and (min-width : 375px) and (max-width : 1440px) {
+    .accueil {
+        background-image: url("/public/images/tablette_background/tabelette_accueil_background.jpg");
+        /* overflow: hidden; */
+    }
+
+    .contenu_principal {
+        width: 59.9%;
+        margin-left: 20.55%;
+        align-items: center;
+    }
+
+    .accueil h1,
+    .accueil p {
+        width: 100%;
+    }
+
+    .accueil p {
+        margin-top: 2rem;
+    }
+
+    .cta-button {
+        font-size: 32px;
+        
+    }
+} 
+
+@media screen and (min-width :769px) {
     /*  paramètres généraux ------------------------- */
     .accueil {
         background-image: url("/public/images/bureau_background/bureau_accueil_background.jpg");
@@ -599,7 +640,7 @@ p {
     .entete-page {
         width: 94.8%;
         height: 96px;
-        margin-left: 3rem;
+        margin-left: 5.2%;
         padding: 0;        
     }
 
@@ -643,9 +684,9 @@ p {
         /* margin: 0; */
     }
 
-    .number {
+    /* .number {
         opacity: 1;
-    }
+    } */
 
     .contenu_principal {
         display: flex;
@@ -655,47 +696,24 @@ p {
         flex-wrap: wrap;
     }
 
-    .speech {
-        order: 1; /* Ajuste l'ordre pour placer le paragraphe après le titre */
-    }
+    /* .speech {
+        order: 1; /* Ajuste l'ordre pour placer le paragraphe après le titre 
+    } */
 
     .accueil h1,
     .accueil p {
-        max-width: 45.28%;
+        width: 58.59%;
+        
     }
 
     .cta-button {
         width: 274px;
         height: 274px;
         padding-top: 4rem;
+        
     }
-    }
+}
       
 
-    @media screen and (min-width : 376px) and (max-width : 768px) {
-        /*  paramètres généraux ------------------------- */
-       
-        .entete-page hr {
-            display: none;
-        }
-        .number {
-            display: none;
-        }
-    
-        /* fin paramêtre généraux ------------------------------ */
-    
-        /* accueil ---------------------------- */
-    
-        .accueil {
-            background-image: url("/public/images/tablette_background/tabelette_accueil_background.jpg");
-            /* overflow: hidden; */
-        }
-    
-        .contenu_principal {
-            width: 59.9%;
-            margin-left: 20.55%;
-        }
-    
-    
-    } 
+
  

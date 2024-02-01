@@ -1,25 +1,35 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html xmlns:og="http://ogp.me/ns#" lang="{{ str_replace('_', '-', app()->getLocale()) }}" aria-lang="fr"><!-- pour indiquer la langue principale de la page.-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Space Tourism</title>
 
-        <!-- Fonts -->
-        <!-- <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" /> -->
-
-        <!-- Styles -->
         @vite(['public/css/app.css', 'public/js/app.js'])
+
+        
+        <!-- balises Open Graph -->
+
+        <meta property="og:title" content="Space Tourism" />
+
+        <meta property="og:type" content="article" />
+
+        <meta property="og:url" content="http://space_tourism.test/destination/lune/open-graph/" />
+
+        <meta property="og:image" content="http://space_tourism/public/images/destination_background/open-graph.jpg" />
+
+        <meta property="og:site_name" content="space tourism page destination" />
+
+        <!---------------------------------------------------->
       
     </head>
 
-    <body class="destination">
+    <body class="destination" aria-live="polite"> <!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
     
         @include('layouts.header')
 
-        <main class="contenu_principal">
+        <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
 
             <h1 class="titre"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
             
@@ -29,21 +39,21 @@
         
             <nav class="planetes">
                 <ul>
-                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune">Lune</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars">Mars</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe">Europe</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan">Titan</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">Lune</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
+                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">Mars</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">Europe</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">Titan</a></li>
                 </ul>
             </nav>
 
-            <section class="etiquette">
+            <section class="etiquette" aria-labelledby="titre_planete"><!--pour faire référence au titre (<h2 class="nom_planete">). Cela peut aider les utilisateurs d'outils d'assistance à comprendre la relation entre la section et son titre.-->
                 <h2 class="nom_planete">{{ $article['titre'] }}</h2>
-                <p class="voyage">{{ $article['voyage'] }}</p>
+                <p class="voyage" aria-live="polite">{{ $article['voyage'] }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
                 <hr>
-                <p class="distance" >Distance 
+                <p class="distance" aria-label="Distance: {{ $article['distance'] }}">Distance 
                     <span>{{ $article['distance'] }}</span>    
                 </p>
-                <p class="duree">Durée
+                <p class="duree" aria-label="Durée: {{ $article['durée'] }}">Durée
                     <span> {{ $article['durée'] }}</span>
                 </p>
             </section>
