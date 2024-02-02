@@ -2,5 +2,72 @@
     "Accueil": "Accueil",
     "Destination": "Destination",
     "Equipage": "Equipage",
-    "Technologie": "Technologie"
+    "Technologie": "Technologie",
+
+
+
+    "titre_page_accueil": "Donc vous voyager dans l'espace",
+    "speech": "Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire !", 
+    "boutton_cta": "EXPLORER",
+     
+
+
+    "titre_page_destination": "01 choisissez votre destination",
+
+    "lune": "lune",
+    "description_lune": "Voyez notre planète comme vous ne l'avez jamais vue auparavant. Un parfait voayage de détente pour vous aider à prendre du recul et revenir requinquer. Pendant que vous y êtes, plangez-vous dans l'histoire en visitant les sites d'atterrissage de Luna 2 et Apollo 11.",
+    "distance_lune": "384000km",
+    "duree_lune": "3 jours",
+
+    "mars" : "mars",
+    "description_mars": "N'oubliez pas vos bottes de randonnée. Vous en aurez besoin pour gravir le mont Olympus, la plus haute montagne planétaire dans notre système solaire. Il fait deux fois et demie la taille de l'Everest!",
+    "distance_mars": "225 GM",
+    "duree_mars": "9 mois",
+
+    "europe": "europe",
+    "description_europe": "La plus petite des quatre lunes galiléennes en orbite autour de Jupiter, Europe est le rêve des amoureux de  l'hiver. Sa surface glacée est parfaite pour faire un peu de patin à glace, du curling, du hockey ou tout simplement pour vous détentre dans votre confortable chalet hivernal.",
+    "distance_europe": "628 Gm",
+    "duree_europe": "3 ans",
+
+    "titan": "titan",
+    "description_titan": "La seule lune connue pour avoir une atmosphère dense autre que la Terre, Titan est comme une maison loin de la laison (et juste quelques centaines de degrés plus froid !). En bonus, vous pouvez contemplez des vues saisissantes des anneaux de Saturne.",
+    "distance_titan": "1,6TM",
+    "duree_titan": "7 ans",
+
+
+
+    "titre_page_equipage": "02 rencontrez l'équipage",
+
+    "Commandant": "Commandant",
+    "nom_commant":"Douglas Hurley",
+    "description_commandant": "Douglas Gerald Hurley est un ingénieur américain, un ancien pilote du Coprs des Marines et un ancien astronaute de la NASA. Il s'est lancé dans l'espace pour la troisième fois en tant que commandant du vaissaux Crew Dragon Demo-2.",
+
+    
+    "specialiste": "Spécialiste de mission",
+    "nom_specialiste": "Mark Shuttleworth",
+    "description_specialite": "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
+    
+    "pilote": "Pilote",
+    "nom_pilote": "Victor Glover",
+    "description_pilote": "Pilote du premier vol opérationnel du SpaceX Crew Dragon à destination de la Station Spatiale Internationale. Glover est commandant dans la marine américaine, où il pilote un F/A-18. Il a été membre de l’équipage de l’Expedition 64 et a servi comme ingénieur de vol des systèmes de station.",
+
+    "ingenieure": "Ingenieure de vol",
+    "nom_ingenieure": "Anousheh Ansari",
+    "description_ingenieure": "Anousheh Ansari est une ingénieure Irano-Américaine et cofondatrice de Prodea Systems. Ansari était la quatrième touriste de l'espace autofinancée, la première femme autofinancée à se rendre à l'ISS, et la première iranienne dans l'espace.",
+
+
+
+    "titre_page_technologie": "03 Lanceur spatial 101",
+
+    "terminologie": "la terminologie",
+    
+    "lanceur": "Le lanceur",
+    "description_lanceur": "Un lanceur ou une fusée porteuse est un véhicule propulsé par fusée utilisé pour transporter une charge utile de la surface de la Terre vers l’espace, habituellement vers l’orbite terrestre ou au-delà. Notre fusée WEB-X est la plus puissante en service. Debout à 150 mètres de hauteur, elle donne lieu à un impressionnant spectacle sur le pas de tir !",
+    
+    "spatiaport": "Le spatioport",
+    "description_spatioport": "Un spatioport ou cosmodrome est un site de lancement (ou de réception) d’engins spatiaux, par analogie avec le port maritime pour les navires ou l’aéroport pour les aéronefs. Basé au célèbre Cap Canaveral, notre spatioport est idéalement situé pour profiter de la rotation de la Terre pour le lancement.",
+
+    "capsule":"La capsule spatiale",
+    "description_capsule": "Une capsule spatiale est un engin spatial habitable qui utilise une capsule à corps émoussé pour rentrer dans l’atmosphère terrestre sans ailes. Notre capsule est l’endroit où vous passerez votre temps pendant le vol. Il comprend une salle de gym, un cinéma et de nombreuses autres activités pour vous divertir."
+
 }
