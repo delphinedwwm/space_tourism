@@ -16,10 +16,10 @@
 
     <nav class="menu">
         <ul>
-            <li><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>Accueil</a></li>
-            <li><a href="{{route('destination', ['planete'=>'lune'])}}" title="page_destination"><span class="number">01</span>Destination</a></li>
-            <li><a href="{{route('equipage', ['equipe'=>'commandant'])}}" title="page_equipage"><span class="number">02</span>Equipage</a></li>
-            <li><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>Technologie</a></li>
+            <li><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>{{ __("Accueil") }}</a></li>
+            <li><a href="{{route('destination', ['planete'=>'lune'])}}" title="page_destination"><span class="number">01</span>{{ __("Destination") }}</a></li>
+            <li><a href="{{route('equipage', ['equipe'=>'commandant'])}}" title="page_equipage"><span class="number">02</span>{{ __("Equipage") }}</a></li>
+            <li><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li>
         </ul>
     </nav>
            

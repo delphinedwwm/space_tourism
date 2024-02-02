@@ -10,15 +10,15 @@
 
         <!-- balises Open Graph -->
 
-        <meta property="og:title" content="Space Tourism" />
+        <meta property="og:title" content="space tourism page équipage" />
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="http://space_tourism.test/equipage/commandant/open-graph/" />
+        <meta property="og:url" content="{{ url('/equipage/' . $article['poste']) }}" />
 
-        <meta property="og:image" content="http://space_tourism/public/images/equipage_background/open-graph.jpg" />
+        <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
-        <meta property="og:site_name" content="space tourism page equipage" />
+        <meta property="og:site_name" content="Space Tourism" />
 
         <!---------------------------------------------------->
       

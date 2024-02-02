@@ -1,0 +1,51 @@
+{
+    //  menu,
+    "Accueil": "Accueil",
+    "Destination": "Destination",
+    "Equipage": "Equipage",
+    "Technologie": "Technologie",
+    
+    // page d'accueil,
+    
+    "Donc vous voyager dans": "Donc vous voyager dans",
+    "Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire !": "Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire !", 
+    "EXPLORER": "EXPLORER",
+    
+    // page destination,
+
+    "01 choisissez votre destination": "01 choisissez votre destination",
+
+    // planêtes,
+    "lune": "lune",
+    "description_lune": "Voyez notre planète comme vous ne l'avez jamais vue auparavant. Un parfait voayage de détente pour vous aider à prendre du recul et revenir requinquer. Pendant que vous y êtes, plangez-vous dans l'histoire en visitant les sites d'atterrissage de Luna 2 et Apollo 11.",
+    "distance_lune": "384000km",
+    "duree_lune": "3 jours",
+
+    "mars" : "mars",
+    "N'oubliez pas vos bottes de randonnée. Vous en aurez besoin pour gravir le mont Olympus, la plus haute montagne planétaire dans notre système solaire. Il fait deux fois et demie la taille de l'Everest!": "N'oubliez pas vos bottes de randonnée. Vous en aurez besoin pour gravir le mont Olympus, la plus haute montagne planétaire dans notre système solaire. Il fait deux fois et demie la taille de l'Everest!",
+    "225 GM": "225 GM",
+    "9 mois": "9 mois",
+
+    "europe": "europe",
+    "La plus petite des quatre lunes galiléennes en orbite autour de Jupiter, Europe est le rêve des amoureux de  l'hiver. Sa surface glacée est parfaite pour faire un peu de patin à glace, du curling, du hockey ou tout simplement pour vous détentre dans votre confortable chalet hivernal.": "La plus petite des quatre lunes galiléennes en orbite autour de Jupiter, Europe est le rêve des amoureux de  l'hiver. Sa surface glacée est parfaite pour faire un peu de patin à glace, du curling, du hockey ou tout simplement pour vous détentre dans votre confortable chalet hivernal.",
+    "628 Gm": "628 Gm",
+    "3 ans": "3 ans",
+
+    "titan": "titan",
+    "La seule lune connue pour avoir une atmosphère dense autre que la Terre, Titan est comme une maison loin de la laison (et juste quelques centaines de degrés plus froid !). En bonus, vous pouvez contemplez des vues saisissantes des anneaux de Saturne.": "La seule lune connue pour avoir une atmosphère dense autre que la Terre, Titan est comme une maison loin de la laison (et juste quelques centaines de degrés plus froid !). En bonus, vous pouvez contemplez des vues saisissantes des anneaux de Saturne.",
+    "1,6 TM": "1,6TM",
+    "7 ans": "7 ans",
+
+    // page équipage,
+    "02 rencontrez l'équipage": "02 rencontrez l'équipage",
+
+    "Commandant": "Commandant",
+    
+    "Spécialiste de mission": "Spécialiste de mission",
+    "Mark Shuttleworth": "Mark Shuttleworth",
+    "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.": "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
+
+    // page technologie,
+    "03 lanceur spatial 101": "03 lanceur spatial 101",
+
+}

@@ -11,15 +11,15 @@
 
         <!-- balises Open Graph -->
 
-        <meta property="og:title" content="Space Tourism" />
+        <meta property="og:title" content="space tourism page accueil" />
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="http://space_tourism.test/open-graph/" />
+        <meta property="og:url" content="{{ url('/accueil') }}" />
 
-        <meta property="og:image" content="http://public/images/bureau_background/bureau_accueil_background.jpg" />
+        <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
-        <meta property="og:site_name" content="space tourism page d'accueil" />
+        <meta property="og:site_name" content="Space Tourism" />
 
         <!---------------------------------------------------->
 

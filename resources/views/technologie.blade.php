@@ -12,15 +12,15 @@
 
         <!-- balises Open Graph -->
 
-        <meta property="og:title" content="Space Tourism" />
+        <meta property="og:title" content="space tourism page technologie" />
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="http://space_tourism.test/technologie/lanceur/open-graph/" />
+        <meta property="og:url" content="{{ url('/technologie/' . $article['objet']) }}" />
 
-        <meta property="og:image" content="http://space_tourism/public/images/technologie_background/open-graph.jpg" />
+        <meta property="og:image" content=" {{ asset('/images/technologie_background.jpg') }}" />
 
-        <meta property="og:site_name" content="space tourism page technologie" />
+        <meta property="og:site_name" content="Space Tourism" />
 
         <!---------------------------------------------------->
     </head>
