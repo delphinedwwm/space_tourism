@@ -4,15 +4,14 @@
     "Equipage": "Equipage",
     "Technologie": "Technologie",
 
-
-
     "titre_page_accueil": "Donc vous voyager dans l'espace",
     "speech": "Soyons objectif; si vous voulez aller dans l'espace, vous pouvez aller véritablement dans le véritable espace et non juste planer sur le bord de celui-ci. Eh bien, asseyez-vous parce que nous allons vous donner une expérience vraiment extraordinaire !", 
     "boutton_cta": "EXPLORER",
-     
 
+    "titre_page_destination": "choisissez votre destination",
 
-    "titre_page_destination": "01 choisissez votre destination",
+    "distance": "distance",
+    "duree": "durée",
 
     "lune": "lune",
     "description_lune": "Voyez notre planète comme vous ne l'avez jamais vue auparavant. Un parfait voayage de détente pour vous aider à prendre du recul et revenir requinquer. Pendant que vous y êtes, plangez-vous dans l'histoire en visitant les sites d'atterrissage de Luna 2 et Apollo 11.",
@@ -34,18 +33,15 @@
     "distance_titan": "1,6TM",
     "duree_titan": "7 ans",
 
-
-
     "titre_page_equipage": "02 rencontrez l'équipage",
 
-    "Commandant": "Commandant",
-    "nom_commant":"Douglas Hurley",
+    "commandant": "Commandant",
+    "nom_commandant":"Douglas Hurley",
     "description_commandant": "Douglas Gerald Hurley est un ingénieur américain, un ancien pilote du Coprs des Marines et un ancien astronaute de la NASA. Il s'est lancé dans l'espace pour la troisième fois en tant que commandant du vaissaux Crew Dragon Demo-2.",
-
     
     "specialiste": "Spécialiste de mission",
     "nom_specialiste": "Mark Shuttleworth",
-    "description_specialite": "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
+    "description_specialiste": "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
     
     "pilote": "Pilote",
     "nom_pilote": "Victor Glover",

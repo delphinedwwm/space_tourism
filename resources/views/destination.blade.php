@@ -31,18 +31,18 @@
 
         <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
 
-            <h1 class="titre"><span class="number_titre_h1">01</span>Choisissez votre destination</h1>
-            
+            <h1 class="titre"><span class="number_titre_h1">01</span>{{ __("titre_page_destination") }}</h1>
+
             <figure class="planete">
                 <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $article['titre'] }}">
             </figure>
         
             <nav class="planetes">
                 <ul>
-                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">Lune</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
-                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">Mars</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">Europe</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">Titan</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">{{ __("lune") }}</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
+                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">{{ __("mars") }}</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">{{ __("europe") }}</a></li>
+                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">{{ __("titan") }}</a></li>
                 </ul>
             </nav>
 
@@ -50,10 +50,10 @@
                 <h2 class="nom_planete">{{ $article['titre'] }}</h2>
                 <p class="voyage" aria-live="polite">{{ $article['voyage'] }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
                 <hr>
-                <p class="distance" aria-label="Distance: {{ $article['distance'] }}">Distance 
+                <p class="distance" aria-label="Distance: {{ $article['distance'] }}">{{ __("distance") }} 
                     <span>{{ $article['distance'] }}</span>    
                 </p>
-                <p class="duree" aria-label="Durée: {{ $article['durée'] }}">Durée
+                <p class="duree" aria-label="Durée: {{ $article['durée'] }}">{{ __("duree") }} 
                     <span> {{ $article['durée'] }}</span>
                 </p>
             </section>

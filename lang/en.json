@@ -10,9 +10,12 @@
      
 
 
-    "titre_page_destination": "01 Choose your destination",
+    "titre_page_destination": "Choose your destination",
 
-    "lune": "Lune",
+    "distance": "distance",
+    "duree": "duration",
+
+    "lune": "moon",
     "description_lune": "See our planet like you've never seen it before. A perfect relaxing journey to help you step back and come back rejuvenated. While you're there, immerse yourself in history by visiting the landing sites of Luna 2 and Apollo 11.",
     "distance_lune": "384000km",
     "duree_lune": "3 days",
@@ -34,16 +37,16 @@
 
 
 
-    "titre_page_equipage": "02 Meet the Crew",
+    "titre_page_equipage": "Meet the Crew",
 
-    "Commandant": "Commander",
-    "nom_commant":"Douglas Hurley",
+    "commandant": "Commander",
+    "nom_commandant":"Douglas Hurley",
     "description_commandant": "Douglas Gerald Hurley is an American engineer, a former Marine Corps pilot, and a former NASA astronaut. He ventured into space for the third time as the commander of the Crew Dragon Demo-2 spacecraft.",
 
     
     "specialiste": "Mission Specialist",
     "nom_specialiste": "Mark Shuttleworth",
-    "description_specialite": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Ubuntu Linux-based operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
+    "description_specialiste": "Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind the Ubuntu Linux-based operating system. Shuttleworth became the first South African to travel to space as a space tourist.",
     
     "pilote": "Pilot",
     "nom_pilote": "Victor Glover",
@@ -55,7 +58,7 @@
 
 
 
-    "titre_page_technologie": "03 Spacecraft 101",
+    "titre_page_technologie": "Spacecraft 101",
 
     "terminologie": "The terminology",
     

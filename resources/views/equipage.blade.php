@@ -30,7 +30,7 @@
         <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
 
 
-        <h1 class="titre"><span class="number_titre_h1">02</span>rencontrez l'équipage</h1>
+        <h1 class="titre"><span class="number_titre_h1">02</span>{{ __("titre_page_equipage") }}</h1>
 
         <figure class="image_equipage">
             <img src="{{ $article['image'] }}" class="equipier" alt="{{ $article['poste'] }}">

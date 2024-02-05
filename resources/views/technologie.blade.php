@@ -31,7 +31,7 @@
 
             <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
                 
-                <h1 class="titre"><span class="number_titre_h1">03</span>Lanceur spatial 101</h1>
+                <h1 class="titre"><span class="number_titre_h1">03</span>{{ __("titre_page_technologie") }}</h1>
                 
                 <figure class="img_technologie">
                     <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
