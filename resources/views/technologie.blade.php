@@ -37,11 +37,11 @@
                     <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
                 </figure>
 
-                <nav class="nav_technologie">
-                    <ul>
-                        <li><a href="{{ route('technologie', ['techno'=>'lanceur']) }}" alt="article_le_lanceur" aria-label="Voir l'article sur le lanceur">1</a></li><!-- pour les liens de navigation afin d'améliorer leur descriptivité -->
-                        <li><a href="{{ route('technologie', ['techno'=>'spatioport']) }}" alt="article_le_spatioport" aria-label="Voir l'article sur le spatioport">2</a></li>
-                        <li><a href="{{ route('technologie', ['techno'=>'capsule']) }}" alt="article_la_capsule_spaciale" aria-label="Voir l'article sur la capsule spatiale">3</a></li>
+                <nav role="nav" class="nav_technologie">
+                    <ul role="list">
+                        <li role="listitem"><a href="{{ route('technologie', ['techno'=>'lanceur']) }}" alt="article_le_lanceur" aria-label="Voir l'article sur le lanceur">1</a></li><!-- pour les liens de navigation afin d'améliorer leur descriptivité -->
+                        <li role="listitem"><a href="{{ route('technologie', ['techno'=>'spatioport']) }}" alt="article_le_spatioport" aria-label="Voir l'article sur le spatioport">2</a></li>
+                        <li role="listitem"><a href="{{ route('technologie', ['techno'=>'capsule']) }}" alt="article_la_capsule_spaciale" aria-label="Voir l'article sur la capsule spatiale">3</a></li>
                     </ul>
                 </nav>
 

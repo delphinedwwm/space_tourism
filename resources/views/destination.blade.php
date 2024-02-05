@@ -38,11 +38,11 @@
             </figure>
         
             <nav class="planetes">
-                <ul>
-                    <li><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">{{ __("lune") }}</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
-                    <li><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">{{ __("mars") }}</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">{{ __("europe") }}</a></li>
-                    <li><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">{{ __("titan") }}</a></li>
+                <ul role="list">
+                    <li role="listitem"><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">{{ __("lune") }}</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
+                    <li role="listitem"><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">{{ __("mars") }}</a></li>
+                    <li role="listitem"><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">{{ __("europe") }}</a></li>
+                    <li role="listitem"><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">{{ __("titan") }}</a></li>
                 </ul>
             </nav>
 

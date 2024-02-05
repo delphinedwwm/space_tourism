@@ -40,11 +40,11 @@
         <hr>
 
         <nav class="nav_equipe">
-            <ul>
-                <li><a href="{{ route('equipage', ['equipe'=>'commandant']) }}" alt="article_commandant" aria-label="Voir l'article sur le commandant"></a></li><!-- pour les liens de navigation afin d'améliorer leur descriptivité -->
-                <li><a href="{{ route('equipage', ['equipe'=>'specialiste']) }}" alt="article_spécialiste_mission" aria-label="Voir l'article sur le spécialiste de mission"></a></li>
-                <li><a href="{{ route('equipage', ['equipe'=>'pilote']) }}" alt="article_pilote" aria-label="Voir l'article sur le pilote"></a></li>
-                <li><a href="{{ route('equipage', ['equipe'=>'ingenieur']) }}" alt="article_ingenieure" aria-label="Voir l'article sur l'ingénieur"></a></li>
+            <ul role="list">
+                <li role="listitem"><a href="{{ route('equipage', ['equipe'=>'commandant']) }}" alt="article_commandant" aria-label="Voir l'article sur le commandant"></a></li><!-- pour les liens de navigation afin d'améliorer leur descriptivité -->
+                <li role="listitem"><a href="{{ route('equipage', ['equipe'=>'specialiste']) }}" alt="article_spécialiste_mission" aria-label="Voir l'article sur le spécialiste de mission"></a></li>
+                <li role="listitem"><a href="{{ route('equipage', ['equipe'=>'pilote']) }}" alt="article_pilote" aria-label="Voir l'article sur le pilote"></a></li>
+                <li role="listitem"><a href="{{ route('equipage', ['equipe'=>'ingenieur']) }}" alt="article_ingenieure" aria-label="Voir l'article sur l'ingénieur"></a></li>
             </ul>
         </nav>
 

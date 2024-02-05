@@ -8,18 +8,24 @@
         </svg>
     </div>
 
+    <div class="langue-selection">
+        <a href="{{ route('change.locale', ['locale' => 'fr']) }}" title="Français">FR</a>
+        <span>|</span>
+        <a href="{{ route('change.locale', ['locale' => 'en']) }}" title="English">EN</a>
+    </div>
+
     <div class="burger-menu">
         <span></span>
     </div>
 
     <hr>
 
-    <nav class="menu">
-        <ul>
-            <li><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>{{ __("Accueil") }}</a></li>
-            <li><a href="{{route('destination', ['planete'=>'lune'])}}" title="page_destination"><span class="number">01</span>{{ __("Destination") }}</a></li>
-            <li><a href="{{route('equipage', ['equipe'=>'commandant'])}}" title="page_equipage"><span class="number">02</span>{{ __("Equipage") }}</a></li>
-            <li><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li>
+    <nav role="nav" class="menu">
+        <ul role="list">
+            <li role="listitem"><a href="{{route('accueil')}}" title="page_accueil"><span class="number">00</span>{{ __("Accueil") }}</a></li>
+            <li role="listitem"><a href="{{route('destination', ['planete'=>'lune'])}}" title="page_destination"><span class="number">01</span>{{ __("Destination") }}</a></li>
+            <li role="listitem"><a href="{{route('equipage', ['equipe'=>'commandant'])}}" title="page_equipage"><span class="number">02</span>{{ __("Equipage") }}</a></li>
+            <li role="listitem"><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li>
         </ul>
     </nav>
            

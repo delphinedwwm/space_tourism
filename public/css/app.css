@@ -501,6 +501,8 @@ p {
     width: 375px;
     margin-top: 2rem; 
     height: 170px;
+    object-position: bottom;
+    object-fit: cover;
     /* overflow: hidden; */
 }
 
