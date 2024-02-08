@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\LangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,6 @@ Route::get('/destination/{planete}', [PageController::class, 'destination'])->na
 Route::get('/equipage/{equipe}', [PageController::class, 'equipage'])->name('equipage');
 Route::get('/technologie/{techno}', [PageController::class, 'technologie'])->name('technologie');
 
-Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
+Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('change.locale');
+// Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
 

@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 class PageController extends Controller
 {
     public function accueil() {
+        // $locale = app()->getLocale();
+        // echo $locale;
         return view('accueil');
     }
     
