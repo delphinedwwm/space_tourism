@@ -10,15 +10,15 @@
 
     <div class="langue-selection">
         <a href="{{ route('change.locale', ['locale' => 'fr']) }}" title="Français">FR</a>
-        <span>|</span>
+        
         <a href="{{ route('change.locale', ['locale' => 'en']) }}" title="English">EN</a>
     </div>
+
+    <hr>
 
     <div class="burger-menu">
         <span></span>
     </div>
-
-    <hr>
 
     <nav role="nav" class="menu">
         <ul role="list">

@@ -56,6 +56,22 @@
     
 }
 
+.langue-selection {
+    color: var(--secondary-color);
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+}
+
+.langue-selection a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-family: var(--police-titre2);
+    margin-left: 2rem;
+    text-align: left;
+}
+
+
 /* ---début css burger normal et au survol------------ */
 .burger-menu {
     cursor: pointer;
@@ -203,7 +219,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    justify-content: space-between
 }
 
 .titre_principal {
@@ -460,7 +476,6 @@ p {
     background: var(--third-color);
 }
 
-
 .poste,
 .nom_personne {
     text-align: center;
@@ -513,6 +528,7 @@ p {
 .nav_technologie {
     width: 51.2%;
 }
+
 .nav_technologie ul {
     display: flex;
     flex-direction: row;
@@ -529,7 +545,6 @@ p {
 
 .nav_technologie li:last-child {
     margin-right: 0;
-
 }
 
 .nav_technologie a {
@@ -591,9 +606,6 @@ p {
 @media screen and (min-width : 460px) {
     /*  paramètres généraux ------------------------- */
     
-    .entete-page hr {
-        display: none;
-    }
     .number {
         display: none;
     }
@@ -601,11 +613,6 @@ p {
     /* fin paramêtre généraux ------------------------------ */
 
     /* accueil ---------------------------- */
-
-    .accueil {
-        background-image: url("/public/images/tablette_background/tabelette_accueil_background.jpg");
-        /* overflow: hidden; */
-    }
 
     .contenu_principal {
         width: 59.9%;
@@ -623,7 +630,7 @@ p {
     }
 
     .cta-button {
-        font-size: 32px;
+        font-size: 20px;
         
     }
 } 
@@ -639,7 +646,9 @@ p {
         width: 94.8%;
         height: 96px;
         margin-left: 5.2%;
-        padding: 0;        
+        padding: 0;  
+        display: flex;
+        font-display: row;      
     }
 
     .burger-menu  {
@@ -651,7 +660,6 @@ p {
         border: var(--third-color) solid 1px;
         opacity: 0.4;
         width: 32.84%;
-        margin-right: 59.38%;
         
     }
 
@@ -660,15 +668,15 @@ p {
         width: 58.59%;
         opacity: 1;
         display: flex;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         align-items:center;  
-        flex-direction: row;
-        backdrop-filter: blur(25px); /*flou à l'arrière-plan de l'élément*/
+        /* flex-direction: row; */
+        background-blend-mode: normal;
+        backdrop-filter: blur(30px); /*flou à l'arrière-plan de l'élément*/
     }
 
     .menu ul {
         display: flex;
-       
     }
 
     .menu li {
@@ -679,12 +687,8 @@ p {
         flex-direction: row;
         font-size: 14px;
         font-family: var(--police-sous-titre2);
-        /* margin: 0; */
+      
     }
-
-    /* .number {
-        opacity: 1;
-    } */
 
     .contenu_principal {
         display: flex;
@@ -694,24 +698,17 @@ p {
         flex-wrap: wrap;
     }
 
-    /* .speech {
-        order: 1; /* Ajuste l'ordre pour placer le paragraphe après le titre 
-    } */
-
     .accueil h1,
     .accueil p {
-        width: 58.59%;
-        
+        width: 58.59%; 
     }
 
     .cta-button {
         width: 274px;
         height: 274px;
         padding-top: 4rem;
-        
+        font-size: 32px;
     }
 }
       
 
-
- 
