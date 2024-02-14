@@ -37,11 +37,11 @@ class DestinationsTableSeeder extends Seeder
             "nom_mars_en" => "mars",
             "description_mars_en"=>"Don't forget your hiking boots. You'll need them to climb Mount Olympus, the tallest planetary mountain in our solar system. It's two and a half times the size of Everest!",
             "distance_mars_en"=>"225 GM",
-            "duree_mars_en"=>"9 months",
+            "duree_mars_en"=>"9 months"
             ],
         
             ['image' => asset("/images/destination/europe.png"),
-            
+
             "nom_europe_fr" =>"europe",
             "description_europe_fr"=>"La plus petite des quatre lunes galiléennes en orbite autour de Jupiter, Europe est le rêve des amoureux de  l'hiver. Sa surface glacée est parfaite pour faire un peu de patin à glace, du curling, du hockey ou tout simplement pour vous détentre dans votre confortable chalet hivernal.",
             "distance_europe_fr"=>"628 Gm",
@@ -63,7 +63,7 @@ class DestinationsTableSeeder extends Seeder
             "nom_titan_en"=>"titan",
             "description_titan_en"=>"The only moon known to have a dense atmosphere other than Earth, Titan is like a home away from home (just a few hundred degrees colder!). As a bonus, you can enjoy stunning views of Saturn's rings.",
             "distance_titan_en"=>"1,6TM",
-            "duree_titan_en"=>"7 years",
+            "duree_titan_en"=>"7 years"
 
             ],
         ];
