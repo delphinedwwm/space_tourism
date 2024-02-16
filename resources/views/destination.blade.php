@@ -15,7 +15,7 @@
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="{{ url('/destination/' . $planet['titre']) }}" />
+        <meta property="og:url" content="{{ url('/destination/' . $planet->titre) }}" />
 
         <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
@@ -34,7 +34,7 @@
             <h1 class="titre"><span class="number_titre_h1">01</span>{{ __("titre_page_destination") }}</h1>
 
             <figure class="planete">
-                <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $article['titre'] }}">
+                <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $planet['titre'] }}">
             </figure>
         
             <nav class="planetes">

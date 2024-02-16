@@ -14,9 +14,12 @@ class PageController extends Controller
     }
     
     public function destination($id) {
-        $planet=Destination::find($id);
-        // dd($planets);
-        return view('destination', ['planet' => $planet]);
+        $locale = app()->getLocale();
+
+        $planet = Destination::select('image', "titre_{$locale} as titre")->find($id);
+
+        return view('destination', ['planet' => $planet , 'locale' => $locale]);
+
     }
 
     public function equipage($equipe) {
