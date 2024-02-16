@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Destination;
 
 class PageController extends Controller
 {
@@ -12,44 +13,10 @@ class PageController extends Controller
         return view('accueil');
     }
     
-    public function destination($planete) {
-        // dd($planete);
-        $articles = [
-            'lune' =>
-                ['image' => asset("/images/destination/lune.png"),
-                'titre' => __("lune"),
-                'voyage' => __("description_lune"),
-                'distance' => __("distance_lune"),
-                'durée' => __("duree_lune")
-                ],
-    
-            'mars' =>
-                ['image' => asset("/images/destination/mars.png"),
-                'titre' => __("mars"),
-                'voyage' => __("description_mars"),
-                'distance' => __("distance_mars"),
-                'durée' => __("duree_mars")
-                ],
-            
-            'europe' =>
-                ['image' => asset("/images/destination/europe.png"),
-                'titre' => __("europe"),
-                'voyage' =>  __("description_europe"),
-                'distance' => __("distance_europe"),
-                'durée' => __("duree_europe")
-                ],
-                
-            'titan' =>
-                ['image' => asset("/images/destination/titan.png"),
-                'titre' => __("titan"),
-                'voyage' => __("description_titan"),
-                'distance' =>  __("distance_titan"),
-                'durée' => __("duree_titan")
-                ],
-        ];
-        return view('destination', [
-            'article' => $articles[$planete]
-        ]);
+    public function destination($id) {
+        $planet=Destination::find($id);
+        // dd($planets);
+        return view('destination', ['planet' => $planet]);
     }
 
     public function equipage($equipe) {

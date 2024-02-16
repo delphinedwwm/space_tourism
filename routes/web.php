@@ -20,7 +20,7 @@ use App\Http\Controllers\LangController;
 // });
 
 Route::get('/', [PageController::class, 'accueil'])->name('accueil');
-Route::get('/destination/{planete}', [PageController::class, 'destination'])->name('destination');
+Route::get('/destination/{id}', [PageController::class, 'destination'])->name('destination');
 Route::get('/equipage/{equipe}', [PageController::class, 'equipage'])->name('equipage');
 Route::get('/technologie/{techno}', [PageController::class, 'technologie'])->name('technologie');
 

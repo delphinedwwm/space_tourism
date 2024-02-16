@@ -15,7 +15,7 @@
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="{{ url('/destination/' . $article['titre']) }}" />
+        <meta property="og:url" content="{{ url('/destination/' . $planet['titre']) }}" />
 
         <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
@@ -26,7 +26,7 @@
     </head>
 
     <body class="destination" aria-live="polite"> <!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
-    
+        {{ dd($planet) }}
         @include('layouts.header')
 
         <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
