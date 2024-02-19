@@ -18,7 +18,9 @@ class PageController extends Controller
 
         $planet = Destination::select('image', "titre_{$locale} as titre")->find($id);
 
-        return view('destination', ['planet' => $planet , 'locale' => $locale]);
+        $link = Destination::all('id', "titre_{$locale}");
+
+        return view('destination', ['planet' => $planet , 'links' => $link]);
 
     }
 
@@ -84,4 +86,4 @@ class PageController extends Controller
             'article' => $articles[$techno]
         ]); 
         }
-}
+    }

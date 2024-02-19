@@ -47,14 +47,14 @@
             </nav>
 
             <section class="etiquette" aria-labelledby="titre_planete"><!--pour faire référence au titre (<h2 class="nom_planete">). Cela peut aider les utilisateurs d'outils d'assistance à comprendre la relation entre la section et son titre.-->
-                <h2 class="nom_planete">{{ $article['titre'] }}</h2>
-                <p class="voyage" aria-live="polite">{{ $article['voyage'] }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
+                <h2 class="nom_planete">{{ $planet["titre_{$locale}"] }}</h2>
+                <p class="voyage" aria-live="polite">{{ $planet['voyage'] }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
                 <hr>
-                <p class="distance" aria-label="Distance: {{ $article['distance'] }}">{{ __("distance") }} 
-                    <span>{{ $article['distance'] }}</span>    
+                <p class="distance" aria-label="Distance: {{ $planet['distance'] }}">{{ __("distance") }} 
+                    <span>{{ $planet['distance'] }}</span>    
                 </p>
-                <p class="duree" aria-label="Durée: {{ $article['durée'] }}">{{ __("duree") }} 
-                    <span> {{ $article['durée'] }}</span>
+                <p class="duree" aria-label="Durée: {{ $planet['durée'] }}">{{ __("duree") }} 
+                    <span> {{ $planet['durée'] }}</span>
                 </p>
             </section>
     

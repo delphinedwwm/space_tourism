@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\Response;
     {
         public function handle($request, Closure $next): Response // méthode handle est la méthode qui est appelée chaque fois qu'une requête HTTP entre dans l'application
         {
+            // dd('locale');
             if(session()->has('locale')) {
                 $locale = session('locale'); //  récupère la langue stockée dans la session de l'utilisateur.  Si aucune langue n'est trouvée dans la session, elle utilise la langue par défaut 
 
