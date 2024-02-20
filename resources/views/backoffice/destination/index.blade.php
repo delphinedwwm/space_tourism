@@ -7,24 +7,47 @@
 </head>
 <body>
     <table>
-        <th>
-            <tr>
-                <td>Id</td> 
-                <td>Titre</td>
-                <td>Description</td>
-                <td>Distance</td>
-                <td>Durée</td>
-            </tr>
-        </th>
-
+        <thead>
+            <th>Id</th> 
+            <th>Titre_fr</th>
+            <th>Description_fr</th>
+            <th>Distance_fr</th>
+            <th>Durée_fr</th>
+            <th>Titre_en</th>
+            <th>Description_en</th>
+            <th>Distance_en</th>
+            <th>Durée</th>
+            <th>Actions</th>
+        </thead>
+        <tbody>
             @foreach($destinations as $destination)
-            <tr>
-                <td> 
-                {{ $destination->id }},{{ $destination->titre_fr }}, {{ $destination->destination_fr }}, {{ $destination->distance_fr }}, {{ $destination->duree_fr }}, {{ $destination->titre_en }}, {{ $destination->destination_en }}, {{ $destination->distance_en }}, {{ $destination->duree_en }}          
-                </td>
-            </tr>
+                <tr>
+                    <td>{{ $destination->id }}</td> 
+                    <td>{{ $destination->titre_fr }}</td>
+                    <td>{{ $destination->destination_fr }}</td>
+                    <td>{{ $destination->distance_fr }}</td>
+                    <td>{{ $destination->duree_fr }}</td>
+                    <td>{{ $destination->titre_en }}</td>
+                    <td>{{ $destination->destination_en }}</td>
+                    <td>{{ $destination->distance_en }}</td>
+                    <td>{{ $destination->duree_en }}</td>
+                    <td>
+                    <form action="{{ route('modifier', ['id' => $destination->id]) }}" method="GET">
+                            <button type="submit">Modifier</button>
+                        </form>
+                        <form action="{{ route('ajouter') }}" method="GET">
+                            <button type="submit">Ajouter</button>
+                        </form>
+                        <form action="{{ route('supprimer', ['id' => $destination->id]) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Supprimer</button>
+                        </form>
+                    </td>
+                </tr>
             @endforeach
-        
+        </tbody>
+
     </table>
 </body>
 </html>
