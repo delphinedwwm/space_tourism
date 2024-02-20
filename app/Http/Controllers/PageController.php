@@ -16,11 +16,17 @@ class PageController extends Controller
     public function destination($id) {
         $locale = app()->getLocale();
 
-        $planet = Destination::select('image', "titre_{$locale} as titre")->find($id);
+        $planet = Destination::select(
+            'image', 
+            "titre_{$locale} as titre",
+            "destination_{$locale} as destination",
+            "distance_{$locale} as distance",
+            "duree_{$locale} as duree"
+            )->find($id);
 
-        $link = Destination::all('id', "titre_{$locale}");
+        $links = Destination::all('id', "titre_{$locale}");
 
-        return view('destination', ['planet' => $planet , 'links' => $link]);
+        return view('destination', ['planet' => $planet , 'links' => $links]);
 
     }
 
