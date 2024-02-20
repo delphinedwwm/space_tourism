@@ -17,6 +17,7 @@ class PageController extends Controller
         $locale = app()->getLocale();
 
         $planet = Destination::select(
+            "id",
             'image', 
             "titre_{$locale} as titre",
             "destination_{$locale} as destination",
@@ -24,7 +25,7 @@ class PageController extends Controller
             "duree_{$locale} as duree"
             )->find($id);
 
-        $links = Destination::all('id', "titre_{$locale}");
+        $links = Destination::all('id', "titre_{$locale} as titre");
 
         return view('destination', ['planet' => $planet , 'links' => $links]);
 

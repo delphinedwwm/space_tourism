@@ -15,7 +15,7 @@
 
         <meta property="og:type" content="article" />
 
-        <meta property="og:url" content="{{ url('/destination/' . $planet->titre) }}" />
+        <meta property="og:url" content="{{ route('destination', $planet->id) }}" />
 
         <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
@@ -34,27 +34,31 @@
             <h1 class="titre"><span class="number_titre_h1">01</span>{{ __("titre_page_destination") }}</h1>
 
             <figure class="planete">
-                <img src="{{ $article['image'] }}" class="img_planete" alt="{{ $planet['titre'] }}">
+                <img src="{{ $planet->image }}" class="img_planete" alt="{{ $planet->titre }}">
             </figure>
         
             <nav class="planetes">
                 <ul role="list">
-                    <li role="listitem"><a href="{{route('destination', ['planete'=>'lune'])}}" alt="article_lune" aria-label="Explorer la Lune">{{ __("lune") }}</a></li> <!--pour les éléments qui ne sont pas immédiatement évidents pour les utilisateurs d'outils d'assistance. -->
-                    <li role="listitem"><a href="{{route('destination', ['planete'=>'mars'])}}" alt="article_mars" aria-label="Explorer Mars">{{ __("mars") }}</a></li>
-                    <li role="listitem"><a href="{{route('destination', ['planete'=>'europe'])}}" alt="article_europe" aria-label="Explorer Europe">{{ __("europe") }}</a></li>
-                    <li role="listitem"><a href="{{route('destination', ['planete'=>'titan'])}}" alt="article_titan" aria-label="Explorer Titan">{{ __("titan") }}</a></li>
+                    <!-- <li role="listitem"><a href="{{route('destination', 1) }}" alt="article_lune" aria-label="Explorer la Lune">{{ __("lune") }}</a></li>  
+                    <li role="listitem"><a href="{{route('destination', 2) }}" alt="article_mars" aria-label="Explorer Mars">{{ __("mars") }}</a></li>
+                    <li role="listitem"><a href="{{route('destination', 3) }}" alt="article_europe" aria-label="Explorer Europe">{{ __("europe") }}</a></li>
+                    <li role="listitem"><a href="{{route('destination', 4) }}" alt="article_titan" aria-label="Explorer Titan">{{ __("titan") }}</a></li> -->
+                    @foreach($links as $link)
+                        <li role="listitem"> <a href="{{ route('destination', $link->id) }}"> {{ $link->titre }} </a></li>
+                    @endforeach
+
                 </ul>
             </nav>
 
             <section class="etiquette" aria-labelledby="titre_planete"><!--pour faire référence au titre (<h2 class="nom_planete">). Cela peut aider les utilisateurs d'outils d'assistance à comprendre la relation entre la section et son titre.-->
-                <h2 class="nom_planete">{{ $planet["titre_{$locale}"] }}</h2>
-                <p class="voyage" aria-live="polite">{{ $planet['voyage'] }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
+                <h2 class="nom_planete">{{ $planet->titre }}</h2>
+                <p class="voyage" aria-live="polite">{{ $planet->destination }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
                 <hr>
-                <p class="distance" aria-label="Distance: {{ $planet['distance'] }}">{{ __("distance") }} 
-                    <span>{{ $planet['distance'] }}</span>    
+                <p class="distance" aria-label="Distance: {{ $planet->distance }}">{{ __("distance") }} 
+                    <span>{{ $planet->distance }}</span>    
                 </p>
-                <p class="duree" aria-label="Durée: {{ $planet['durée'] }}">{{ __("duree") }} 
-                    <span> {{ $planet['durée'] }}</span>
+                <p class="duree" aria-label="Duree: {{ $planet->duree }}">{{ __("duree") }} 
+                    <span> {{ $planet->duree }}</span>
                 </p>
             </section>
     
