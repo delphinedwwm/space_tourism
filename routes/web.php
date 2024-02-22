@@ -30,3 +30,5 @@ Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('chan
 // Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
 
 Route::get('backoffice/destination', [DestinationController::class, 'index'])->name('backoffice.destination.index');
+// Route pour afficher le formulaire de modification d'une destination
+Route::get('backoffice/destination/show/{id}', [DestinationController::class, 'show'])->name('backoffice.destination.show');
