@@ -10,7 +10,6 @@
 <body>
     <div class="container">
         <h1 class="mt-5 mb-4">Destinations</h1>
-        <button class="btn btn-primary mb-3">Ajouter une planète</button>
         <table class="table">
             <thead class="thead-dark">
                 <tr>

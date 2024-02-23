@@ -32,3 +32,5 @@ Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('chan
 Route::get('backoffice/destination', [DestinationController::class, 'index'])->name('backoffice.destination.index');
 // Route pour afficher le formulaire de modification d'une destination
 Route::get('backoffice/destination/show/{id}', [DestinationController::class, 'show'])->name('backoffice.destination.show');
+Route::get('backoffice/destination/create', [DestinationController::class, 'create'])->name('backoffice.destination.create');
+Route::post('backoffice/destination/store', [DestinationController::class, 'store'])->name('backoffice.destination.store');
