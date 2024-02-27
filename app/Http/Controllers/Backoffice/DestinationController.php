@@ -65,10 +65,12 @@ class DestinationController extends Controller
     public function update(Request $request, $id)
     {
         // Valider les données
+
+        // dd("salut!");
        
         $validatedData = $request->validate([
             // Spécifiez les règles de validation pour les champs
-            'image' => 'required|image',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'titre_fr' => 'required|string|max:255', // required = champs obligatoire et '|' est utilisée pour séparer différentes règles de validation 
             'destination_fr' => 'required|string',
             'distance_fr' => 'required|string',
@@ -83,7 +85,17 @@ class DestinationController extends Controller
 
         // Mettre à jour les attributs de la destination
         $destination->update($validatedData);
-        $destination->image = 'pas d\'image';
+
+        if($request->image !== null){
+            // dd(gettype($request->image))
+            $path = $request->image->store('images', 'public');
+
+            $destination->image = 'storage/'.$path;
+        }
+        // $path = $validatedData['image']->store('images', 'public');
+
+        // $destination->image = 'storage/'.$path;
+
         $destination->save();
 
         return redirect()->route('backoffice.destination.index');

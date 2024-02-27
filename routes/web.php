@@ -36,7 +36,7 @@ Route::get('backoffice/destination/create', [DestinationController::class, 'crea
 Route::post('backoffice/destination/store', [DestinationController::class, 'store'])->name('backoffice.destination.store');
 
 Route::get('backoffice/destination/edit/{id}', [DestinationController::class, 'edit'])->name('backoffice.destination.edit');
-Route::put('backoffice/destination/update/{id}', [DestinationController::class, 'update'])->name('backoffice.destination.update');
+Route::post('backoffice/destination/update/{id}', [DestinationController::class, 'update'])->name('backoffice.destination.update');
 
 Route::get('backoffice/destination/delete/{id}', [DestinationController::class, 'delete'])->name('backoffice.destination.delete');
 Route::delete('backoffice/destination/destroy/{id}', [DestinationController::class, 'destroy'])->name('backoffice.destination.destroy');

@@ -24,15 +24,14 @@
                 @foreach($destinations as $destination)
                     <tr>
                         <td>{{ $destination->id }}</td> 
-                        <td>{{ $destination->titre_fr }} <br> {{ $destination->titre_en }}</td>
-                        <td><img src="{{ asset('images/destination/'.$destination->image) }}" alt="{{ $destination->titre_fr }}" class="img-fluid"></td>
+                        <td>{{ $destination->titre_fr }} <br> {{ $destination->titre_en }} </td>
+                        <td><img src="{{ asset($destination->image) }}" alt="{{ $destination->titre_fr }}" class="img-fluid img-thumbnail" style="max-width: 100px;"></td>
                         <td>
-                            <a href="{{ route('backoffice.destination.show', $destination->id) }}"><button>Aperçu</button></a>
-                            <a href="{{ route('backoffice.destination.edit', $destination->id) }}"><button>Modifier</button></a>
-                            <a href="{{ route('backoffice.destination.delete', $destination->id) }}"><button>Supprimer</button></a>
+                            <a href="{{ route('backoffice.destination.show', $destination->id) }}" class="btn btn-info">Aperçu</a>
+                            <a href="{{ route('backoffice.destination.edit', $destination->id) }}" class="btn btn-warning">Modifier</a>
+                            <a href="{{ route('backoffice.destination.delete', $destination->id) }}" class="btn btn-danger">Supprimer</a>
                         </td>
                     </tr>
-
                 @endforeach
             </tbody>
         </table>
@@ -44,3 +43,4 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
