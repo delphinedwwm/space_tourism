@@ -38,14 +38,14 @@
                 <input type="text" class="form-control" id="duree_fr" name="duree_fr" value = "{{ $destination->duree_fr }}">
                 @error('duree_fr')
                     <span>{{ $message }}</span>
-                @enderror>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="titre_en">Titre (EN)</label>
                 <input type="text" class="form-control" id="titre_en" name="titre_en"  value = "{{ $destination->titre_en }}">
                 @error('titre_en')
                     <span>{{ $message }}</span>
-                @enderror>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="destination_fr">Destination (EN) </label>
@@ -59,14 +59,14 @@
                 <textarea class="form-control" id="distance_en" name="distance_en">{{ $destination->distance_en }}</textarea>
                 @error('distance_en')
                     <span>{{ $message }}</span>
-                @enderror>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="duree_en">Durée (EN)</label>
                 <input type="text" class="form-control" id="duree_en" name="duree_en" value = "{{ $destination->duree_en }}">
                 @error('distance_en')
                     <span>{{ $message }}</span>
-                @enderror>
+                @enderror
             </div>
             <button type="submit" class="btn btn-primary">Mettre à jour</button>
         </form>

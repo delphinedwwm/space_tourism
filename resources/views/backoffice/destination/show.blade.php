@@ -29,7 +29,7 @@
             <tbody>  
                 <tr>
                     <td>{{ $destination->id }}</td> 
-                    <td><img src="{{ asset('images/destination/'.$destination->image) }}" alt="{{ $destination->titre_fr }}" class="img-fluid"></td>
+                    <td><img src="{{ asset($destination->image) }}" alt="{{ $destination->titre_fr }}" class="img-fluid"></td>
                     <td>{{ $destination->titre_fr }} </td>
                     <td>{{ $destination->destination_fr}}</td>
                     <td>{{ $destination->distance_fr }}</td>

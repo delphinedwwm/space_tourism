@@ -33,7 +33,7 @@ class DestinationController extends Controller
        
         $validatedData = $request->validate([
             // Spécifiez les règles de validation pour les champs
-            // 'image' => asset('image/' . 'required|picture'),
+            'image' =>'required|image|mimes:jpg,png|max:2048',
             'titre_fr' => 'required|string|max:255', // required = champs obligatoire et '|' est utilisée pour séparer différentes règles de validation 
             'destination_fr' => 'required|string',
             'distance_fr' => 'required|string',
@@ -43,10 +43,13 @@ class DestinationController extends Controller
             'distance_en' => 'required|string',
             'duree_en' => 'required|string',
         ]);
- 
-        $destination = new Destination($validatedData);
        
-        $destination->image = 'pas d\'image';
+        $destination = new Destination($validatedData);
+
+        $path = $validatedData['image']->store('images', 'public');
+
+        $destination->image = 'storage/'.$path;
+
         $destination->save();
 
         return redirect()->route('backoffice.destination.index');
@@ -65,7 +68,7 @@ class DestinationController extends Controller
        
         $validatedData = $request->validate([
             // Spécifiez les règles de validation pour les champs
-            // 'image' => asset('image/' . 'required|picture'),
+            'image' => 'required|image',
             'titre_fr' => 'required|string|max:255', // required = champs obligatoire et '|' est utilisée pour séparer différentes règles de validation 
             'destination_fr' => 'required|string',
             'distance_fr' => 'required|string',
