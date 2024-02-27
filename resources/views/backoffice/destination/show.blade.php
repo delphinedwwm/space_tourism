@@ -40,8 +40,11 @@
                     <td>{{ $destination->duree_en }}</td>
                     <td>
                         <button>Modifier</button>
-                        <button>Supprimer</button>
-                        <a href="{{ route('backoffice.destination.index', $destination->id) }}"><button>Retour</button></a>
+                        <a href="{{ route('backoffice.destination.delete', $destination->id) }}"><button>Supprimer</button></a>
+                        </form>
+                        <form action="{{ route('backoffice.destination.index', $destination->id) }}" method="GET">
+                            <button>Retour</button>
+                        </form>
                     </td>
                 </tr>
             </tbody>

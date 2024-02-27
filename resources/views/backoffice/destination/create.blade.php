@@ -11,13 +11,13 @@
     <div class="container">
         <h1 class="mt-5 mb-4">Créer une nouvelle planète</h1>
 
-        <!-- @if ($errors->any() )
+        @if ($errors->any() )
             <ul id="errors">
                 @foreach ($errors->all() as $error)
                     <li> {{ $error }} </li>
                 @endforeach
             </ul>
-        @endif -->
+        @endif
 
         <form action="{{ route('backoffice.destination.store') }}" method="POST">
             @csrf <!-- Ajoute le jeton CSRF pour la sécurité -->
@@ -30,7 +30,7 @@
             </div>
             <div class="form-group">
                 <label for="destination_fr">Destination (FR)</label>
-                <textarea class="form-control" id="distance_fr" name="distance_fr">"{{ old('distance_fr', '') }}"</textarea>
+                <textarea class="form-control" id="destination_fr" name="destination_fr">"{{ old('destination_fr', '') }}"</textarea>
                 @error('destination_fr')
                     <span>{{ $message }}</span>
                 @enderror
@@ -51,24 +51,24 @@
             </div>
             <div class="form-group">
                 <label for="titre_en">Titre (EN)</label>
-                <input type="text" class="form-control" id="titre_en" name="titre_en"  value = "{{ old('titre_en', '') }}">
+                <input type="text" class="form-control" id="titre_en" name="titre_en" value = "{{ old('titre_en', '') }}">
                 @error('titre_en')
                     <span>{{ $message }}</span>
                 @enderror>
             </div>
             <div class="form-group">
-                <label for="destination_en">Description (EN)</label>
-                <imput type="text" class="form-control" id="destination_en" name="destination_en"  value = "{{ old('destination_en', '') }}">
-                @error('destination_en')
+                <label for="destination_en">Destination (EN)</label>
+                <textarea class="form-control" id="destination_en" name="destination_en">"{{ old('destination_en', '') }}"</textarea>
+                @error('destination_fr')
                     <span>{{ $message }}</span>
                 @enderror
             </div>
             <div class="form-group">
                 <label for="distance_en">Distance (EN)</label>
-                <textarea class="form-control" id="distance_en" name="distance_en">"{{ old('distance_en', '') }}"</textarea>
-                @error('distance_en')
+                <input type="text" class="form-control" id="distance_en" name="distance_en" value = "{{ old('titre_en', '') }}">
+                @error('titre_fr')
                     <span>{{ $message }}</span>
-                @enderror>
+                @enderror
             </div>
             <div class="form-group">
                 <label for="duree_en">Durée (EN)</label>

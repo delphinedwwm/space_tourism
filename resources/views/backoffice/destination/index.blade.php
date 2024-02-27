@@ -29,7 +29,7 @@
                         <td>
                             <a href="{{ route('backoffice.destination.show', $destination->id) }}"><button>Aperçu</button></a>
                             <button>Modifier</button>
-                            <button>Supprimer</button>
+                            <a href="{{ route('backoffice.destination.delete', $destination->id) }}"><button>Supprimer</button></a>
                         </td>
                     </tr>
 

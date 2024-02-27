@@ -30,7 +30,13 @@ Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('chan
 // Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
 
 Route::get('backoffice/destination', [DestinationController::class, 'index'])->name('backoffice.destination.index');
-// Route pour afficher le formulaire de modification d'une destination
 Route::get('backoffice/destination/show/{id}', [DestinationController::class, 'show'])->name('backoffice.destination.show');
+
 Route::get('backoffice/destination/create', [DestinationController::class, 'create'])->name('backoffice.destination.create');
 Route::post('backoffice/destination/store', [DestinationController::class, 'store'])->name('backoffice.destination.store');
+
+Route::get('backoffice/destination/edit/{id}', [DestinationController::class, 'edit'])->name('backoffice.destination.edit');
+Route::put('backoffice/destination/update/{id}', [DestinationController::class, 'update'])->name('backoffice.destination.update');
+
+Route::get('backoffice/destination/delete/{id}', [DestinationController::class, 'delete'])->name('backoffice.destination.delete');
+Route::delete('backoffice/destination/destroy/{id}', [DestinationController::class, 'destroy'])->name('backoffice.destination.destroy');

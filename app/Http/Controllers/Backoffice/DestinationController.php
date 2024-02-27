@@ -17,7 +17,7 @@ class DestinationController extends Controller
 
     public function show($id)
     {
-        $destination = Destination::findOrFail($id);
+        $destination = Destination::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
         return view('backoffice.destination.show', compact('destination'));
         
     }
@@ -34,7 +34,7 @@ class DestinationController extends Controller
         $validatedData = $request->validate([
             // Spécifiez les règles de validation pour les champs
             // 'image' => asset('image/' . 'required|picture'),
-            'titre_fr' => 'required|string|max:255',
+            'titre_fr' => 'required|string|max:255', // required = champs obligatoire et '|' est utilisée pour séparer différentes règles de validation 
             'destination_fr' => 'required|string',
             'distance_fr' => 'required|string',
             'duree_fr' => 'required|string',
@@ -52,4 +52,33 @@ class DestinationController extends Controller
         return redirect()->route('backoffice.destination.index');
     }
 
+    public function edit($id)
+    {
+        $destination = Destination::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
+        return view('backoffice.destination.edit', compact('destination'));
+        
+    }
+
+    public function delete($id)
+    {
+        // Trouver la destination correspondante dans la base de données
+        $destination = Destination::findOrFail($id);
+
+        // Passer la destination à la vue
+        return view('backoffice.destination.delete', compact('destination'));
+    }
+
+
+    // Supprime une destination
+    public function destroy($id)
+    {
+        // Trouve la destination à supprimer
+        $destination = Destination::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
+
+        // Supprime la destination de la base de données
+        $destination->delete();
+
+        // Redirige l'utilisateur vers la page index 
+        return redirect()->route('backoffice.destination.index');
+    }
 }
