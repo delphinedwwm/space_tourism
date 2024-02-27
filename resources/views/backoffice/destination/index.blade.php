@@ -28,7 +28,7 @@
                         <td><img src="{{ asset('images/destination/'.$destination->image) }}" alt="{{ $destination->titre_fr }}" class="img-fluid"></td>
                         <td>
                             <a href="{{ route('backoffice.destination.show', $destination->id) }}"><button>Aperçu</button></a>
-                            <button>Modifier</button>
+                            <a href="{{ route('backoffice.destination.edit', $destination->id) }}"><button>Modifier</button></a>
                             <a href="{{ route('backoffice.destination.delete', $destination->id) }}"><button>Supprimer</button></a>
                         </td>
                     </tr>

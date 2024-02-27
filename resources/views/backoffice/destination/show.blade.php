@@ -39,7 +39,7 @@
                     <td>{{ $destination->distance_en }}</td>
                     <td>{{ $destination->duree_en }}</td>
                     <td>
-                        <button>Modifier</button>
+                    <a href="{{ route('backoffice.destination.edit', $destination->id) }}"><button>Modifier</button></a>
                         <a href="{{ route('backoffice.destination.delete', $destination->id) }}"><button>Supprimer</button></a>
                         </form>
                         <form action="{{ route('backoffice.destination.index', $destination->id) }}" method="GET">
