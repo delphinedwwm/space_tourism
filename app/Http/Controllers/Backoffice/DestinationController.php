@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Backoffice;
 use App\Models\Destination; 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class DestinationController extends Controller
 {
@@ -63,11 +65,8 @@ class DestinationController extends Controller
     }
 
     public function update(Request $request, $id)
-    {
-        // Valider les données
-
-        // dd("salut!");
-       
+    {   // Valider les données
+   
         $validatedData = $request->validate([
             // Spécifiez les règles de validation pour les champs
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
@@ -80,22 +79,44 @@ class DestinationController extends Controller
             'distance_en' => 'required|string',
             'duree_en' => 'required|string',
         ]);
-        // Récupérer la destination depuis la base de données
-        $destination = Destination::findOrFail($id);
+        
+        $destination = Destination::findOrFail($id); // Récupérer la destination depuis la base de données
+        $oldImagePath = $destination->image;
 
-        // Mettre à jour les attributs de la destination
-        $destination->update($validatedData);
+        
+        // if($request->image !== null){ 
+            
+            // storage::delete($destination->'image', 'id');
 
-        if($request->image !== null){
-            // dd(gettype($request->image))
-            $path = $request->image->store('images', 'public');
+            // $path = $request->image->store('images', 'public');
 
-            $destination->image = 'storage/'.$path;
-        }
+            // $destination->image = 'storage/'.$path;
+        // }
         // $path = $validatedData['image']->store('images', 'public');
 
         // $destination->image = 'storage/'.$path;
 
+        if ($request->hasFile('image')) {
+            // méthode hasFile() pour vérifier si un fichier a été téléchargé avec la clé 'image' dans la requête.
+        
+            if ($oldImagePath) {
+                // Extraire le chemin de l'image de $destination->image
+                // $imagePath = Storage::url($oldImagePath);
+
+                // Supprimer l'image du dossier storage/app/public/images
+                $oldImagePath = str_replace('storage/', '', $oldImagePath);
+                Storage::disk('public')->delete($oldImagePath);
+            }
+        
+            // $imagePath = $request->image->store('images', 'public');
+            $path = $validatedData['image']->store('images', 'public');
+            $destination->image = 'storage/'.$path;
+            // dd($destination->image);
+            // Si $request->image n'est pas nul, alors le code exécute la méthode store() sur l'objet $request->image.
+            // dossier de destination où le fichier doit être stocké ('images') et le système de fichiers de stockage à utiliser ('public').
+
+        }
+        // $destination->update($validatedData); // Mettre à jour les attributs de la destination
         $destination->save();
 
         return redirect()->route('backoffice.destination.index');

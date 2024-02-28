@@ -13,7 +13,7 @@
 
         <form action="{{ route('backoffice.destination.update', $destination->id) }}" method="POST" enctype="multipart/form-data">
             @csrf <!-- Ajoute le jeton CSRF pour la sécurité -->
-            @method('POST')
+            @method('POST') <!-- en php que 2 method connues : get et post -->
             <input type="file" id="image" name="image" accept="image/png, image/jpeg">
             @error('image')
             <span>{{ $message }}</span>
