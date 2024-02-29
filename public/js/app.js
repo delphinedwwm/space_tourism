@@ -58,12 +58,15 @@ ctaButton.addEventListener('mouseout', () => {
 // Liste des mots à afficher lors du survol
 const words = ["Explorer", "Voyager", "Sonder", "S'aventurer"];
 
-// Fonction pour changer le mot affiché lors du survol
-function changeWord() {
+// Sélection de tous les éléments avec la classe .cta-button
+const ctaButtons = document.querySelectorAll('.cta-button');
+
+ctaButtons.forEach(button => {
+    // Attribution aléatoire d'un mot différent à chaque bouton
     const randomIndex = Math.floor(Math.random() * words.length);
-    const word = words[randomIndex];
-    document.getElementById('cta-button').textContent = word;
-}
+    const randomWord = words[randomIndex];
+    button.setAttribute('data-hover-text', randomWord);
+});
 
 
 
