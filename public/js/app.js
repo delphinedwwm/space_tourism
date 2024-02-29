@@ -12,9 +12,48 @@ burgerMenu.addEventListener('click', function() {
 
 
 // js logo ------------------------------------
+
 var logo = document.querySelector('.logo');
 
 logo.addEventListener('clic', function() {
   this.classList.toggle('accueil');
 });
-// fin js logo --------------------------------
+// // fin js logo --------------------------------
+
+
+
+// js bouton explorer --------------
+
+const ctaButton = document.querySelector('.cta-button');
+let counter = 0;
+
+ctaButton.addEventListener('mouseover', () => {
+    counter++;
+    switch (counter % 4) { // Change l'image de fond toutes les 4 survols
+        case 0:
+            ctaButton.classList.remove('planete2', 'planete3', 'planete4');
+            ctaButton.classList.add('planete1');
+            break;
+        case 1:
+            ctaButton.classList.remove('planete1', 'planete3', 'planete4');
+            ctaButton.classList.add('planete2');
+            break;
+        case 2:
+            ctaButton.classList.remove('planete1', 'planete2', 'planete4');
+            ctaButton.classList.add('planete3');
+            break;
+        case 3:
+            ctaButton.classList.remove('planete1', 'planete2', 'planete3');
+            ctaButton.classList.add('planete4');
+        
+    }
+    // ctaButton.style.backgroundColor = 'white';
+});
+ 
+ctaButton.addEventListener('mouseout', () => {
+  // ctaButton.style.backgroundImage = 'none'; // Réinitialise l'image de fond à aucune image
+  // ctaButton.style.backgroundColor = 'white'; // Réinitialise le fond du bouton à la couleur blanche
+});
+
+
+

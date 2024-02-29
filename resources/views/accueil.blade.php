@@ -34,7 +34,8 @@
                 <p class="speech" aria-live="polite">{{ __("speech") }}</p> <!--le paragraphe contient des informations importantes qui peuvent être mises à jour dynamiquement-->
                 <a href="{{route('destination', ['id'=>'1'])}}" class="cta-button" aria-label="Explorer la Lune">{{ __("boutton_cta") }}</a><!--pour fournir une description significative du lien.-->
             </main>  
-     
+
+        <script src="app.js"></script>
     </body>
     
 </html>
