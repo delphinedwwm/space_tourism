@@ -55,5 +55,15 @@ ctaButton.addEventListener('mouseout', () => {
   // ctaButton.style.backgroundColor = 'white'; // Réinitialise le fond du bouton à la couleur blanche
 });
 
+// Liste des mots à afficher lors du survol
+const words = ["Explorer", "Voyager", "Sonder", "S'aventurer"];
+
+// Fonction pour changer le mot affiché lors du survol
+function changeWord() {
+    const randomIndex = Math.floor(Math.random() * words.length);
+    const word = words[randomIndex];
+    document.getElementById('cta-button').textContent = word;
+}
+
 
 

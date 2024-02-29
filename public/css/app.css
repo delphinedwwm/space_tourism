@@ -730,22 +730,29 @@ p {
     letter-spacing: 10px;
     color: var(--secondary-color);
     transform: scale(1.1); 
+    animation: rotation 30s infinite linear;
 }
 
-/* Ajoutez l'animation de rotation en dehors de :hover */
-.cta-button.rotating {
-    animation: rotation 8s infinite linear;
+@keyframes rotation-start {
+    0% {
+        letter-spacing: 5px; /* Espacement normal des lettres */
+    }
+    99% {
+        letter-spacing: 0; /* Fait disparaître le texte */
+    }
+    100% {
+        letter-spacing: 0; /* Garde le texte invisible */
+    }
 }
 
 @keyframes rotation {
     from {
-        transform: rotate(0deg);
+        transform: rotate(0deg); /* Rotation initiale */
     }
     to {
-        transform: rotate(360deg);
+        transform: rotate(360deg); /* Rotation complète */
     }
 }
-
 /* Utilisez des classes différentes pour chaque planète */
 .planete1 {
     background-image: url('/public/images/destination/lune.png');
@@ -762,5 +769,9 @@ p {
 .planete4 {
     background-image: url('/public/images/destination/titan.png');
 }
+
+/* Définition des pseudo-éléments pour changer le texte */
+
+
 
 }    
