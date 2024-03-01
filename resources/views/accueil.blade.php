@@ -1,15 +1,5 @@
 @extends('layouts.main')
 
-<!-- <meta property="og:title" content="space tourism page accueil" />
-
-<meta property="og:type" content="article" />
-
-<meta property="og:url" content="{{ url('/accueil') }}" />
-
-<meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
-
-<meta property="og:site_name" content="Space Tourism" /> -->
-
 @section('og-title', 'space tourism page accueil')
 
 @section('og-url', url('/accueil'))
