@@ -1,7 +1,7 @@
 // js burger ---------------------------------------------------
-var burgerMenu = document.querySelector('.burger-menu');
+const burgerMenu = document.querySelector('.burger-menu');
 
-var overlay = document.querySelector('.menu');
+const overlay = document.querySelector('.menu');
 
 burgerMenu.addEventListener('click', function() {
   this.classList.toggle("close");
@@ -13,16 +13,16 @@ burgerMenu.addEventListener('click', function() {
 
 // js logo ------------------------------------
 
-var logo = document.querySelector('.logo');
+const logo = document.querySelector('.logo');
 
-logo.addEventListener('clic', function() {
+logo.addEventListener('click', function() {
   this.classList.toggle('accueil');
 });
 // // fin js logo --------------------------------
 
 
 
-// js bouton explorer --------------
+// js bouton explorer --------------------------------------------------------------
 
 const ctaButton = document.querySelector('.cta-button');
 let counter = 0;
@@ -40,7 +40,7 @@ ctaButton.addEventListener('mouseover', () => {
             break;
         case 2:
             ctaButton.classList.remove('planete1', 'planete2', 'planete4');
-            ctaButton.classList.add('planete3');
+            ctaButton.classList.add('planete3' );
             break;
         case 3:
             ctaButton.classList.remove('planete1', 'planete2', 'planete3');
@@ -50,22 +50,29 @@ ctaButton.addEventListener('mouseover', () => {
     // ctaButton.style.backgroundColor = 'white';
 });
  
-ctaButton.addEventListener('mouseout', () => {
-  // ctaButton.style.backgroundImage = 'none'; // Réinitialise l'image de fond à aucune image
-  // ctaButton.style.backgroundColor = 'white'; // Réinitialise le fond du bouton à la couleur blanche
-});
+// ctaButton.addEventListener('mouseout', () => {
+//  ctaButton.style.backgroundImage = 'none'; // Réinitialise l'image de fond à aucune image
+//   ctaButton.style.backgroundColor = 'white'; // Réinitialise le fond du bouton à la couleur blanche
+// });
+
+//  fin animation et fond du bouton --------------------------
+
+
+// texte du bouton ------------------------------------------
 
 // Liste des mots à afficher lors du survol
-const words = ["Explorer", "Voyager", "Sonder", "S'aventurer"];
+const words = ["Explorer", "Voyager", "Visiter", "S'aventurer"];
 
 // Sélection de tous les éléments avec la classe .cta-button
 const ctaButtons = document.querySelectorAll('.cta-button');
 
 ctaButtons.forEach(button => {
-    // Attribution aléatoire d'un mot différent à chaque bouton
-    const randomIndex = Math.floor(Math.random() * words.length);
-    const randomWord = words[randomIndex];
-    button.setAttribute('data-hover-text', randomWord);
+    button.addEventListener('mouseover', () => {
+        // Attribution aléatoire d'un mot différent à chaque survol
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const randomWord = words[randomIndex];
+        button.setAttribute('data-hover-text', randomWord);
+    });
 });
 
 

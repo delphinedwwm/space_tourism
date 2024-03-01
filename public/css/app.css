@@ -707,10 +707,7 @@ p {
     width: 274px;
     height: 274px;
     padding-top: 4rem;
-    font-size: 32px;
-    letter-spacing: 5px;
-    transition: letter-spacing 0.3s ease-in-out;
-     background-color: 0.3s ease-in-out; /* Ajout de la transition pour background-color */
+    background-color: 0.3s ease-in-out; /* Ajout de la transition pour background-color */
     box-shadow: 
         0 0 5px var(--secondary-color),
         0 0 25px var(--secondary-color);
@@ -719,7 +716,6 @@ p {
     background-position: center;
 }
 
-/* Déplacez l'animation de rotation en dehors de :hover */
 .cta-button:hover {
     box-shadow: 
         0 0 5px var(--secondary-color),
@@ -727,23 +723,14 @@ p {
         0 0 50px var(--secondary-color),
         0 0 100px var(--secondary-color),
         0 0 200px var(--secondary-color);
+    font-size: 32px;
     letter-spacing: 10px;
-    color: var(--secondary-color);
+    transition: letter-spacing 0.3s ease-in-out;color: var(--secondary-color);
     transform: scale(1.1); 
-    animation: rotation 30s infinite linear;
+    animation: rotation 90s infinite linear;
 }
 
-@keyframes rotation-start {
-    0% {
-        letter-spacing: 5px; /* Espacement normal des lettres */
-    }
-    99% {
-        letter-spacing: 0; /* Fait disparaître le texte */
-    }
-    100% {
-        letter-spacing: 0; /* Garde le texte invisible */
-    }
-}
+
 
 @keyframes rotation {
     from {
@@ -753,7 +740,7 @@ p {
         transform: rotate(360deg); /* Rotation complète */
     }
 }
-/* Utilisez des classes différentes pour chaque planète */
+
 .planete1 {
     background-image: url('/public/images/destination/lune.png');
 }
@@ -769,8 +756,6 @@ p {
 .planete4 {
     background-image: url('/public/images/destination/titan.png');
 }
-
-/* Définition des pseudo-éléments pour changer le texte */
 
 
 

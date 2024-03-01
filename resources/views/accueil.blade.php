@@ -1,41 +1,30 @@
-<!DOCTYPE html>
-<html xmlns:og="http://ogp.me/ns#" lang="{{ str_replace('_', '-', app()->getLocale()) }}" aria-lang="fr"><!-- pour indiquer la langue principale de la page.-->
+@extends('layouts.main')
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <meta property="og:title" content="space tourism page accueil" />
 
-        <title>Space Tourism</title>
+<meta property="og:type" content="article" />
 
-        @vite(['public/css/app.css', 'public/js/app.js'])
+<meta property="og:url" content="{{ url('/accueil') }}" />
 
-        <!-- balises Open Graph -->
+<meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
 
-        <meta property="og:title" content="space tourism page accueil" />
+<meta property="og:site_name" content="Space Tourism" /> -->
 
-        <meta property="og:type" content="article" />
+@section('og-title', 'space tourism page accueil')
 
-        <meta property="og:url" content="{{ url('/accueil') }}" />
+@section('og-url', url('/accueil'))
 
-        <meta property="og:image" content=" {{ asset('/images/destination_background.jpg') }}" />
+@section('og-image', asset('/images/destination_background.jpg'))
 
-        <meta property="og:site_name" content="Space Tourism" />
+@section('title', 'Accueil')
 
-        <!---------------------------------------------------->
+@section('img-bkgrd', 'accueil')
 
-    </head>
+@section('content')
+    <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
+        <h1 class="titre_principal">{{ __("titre_page_accueil") }}</span></h1>
+        <p class="speech" aria-live="polite">{{ __("speech") }}</p> <!--le paragraphe contient des informations importantes qui peuvent être mises à jour dynamiquement-->
+        <a href="{{route('destination', ['id'=>'1'])}}" class="cta-button" aria-label="Explorer la Lune">{{ __("boutton_cta") }}</a><!--pour fournir une description significative du lien.-->
+    </main> 
+@endsection 
 
-    <body class="accueil" aria-live="polite"> <!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
-
-        @include('layouts.header')
-
-            <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
-                <h1 class="titre_principal">{{ __("titre_page_accueil") }}</span></h1>
-                <p class="speech" aria-live="polite">{{ __("speech") }}</p> <!--le paragraphe contient des informations importantes qui peuvent être mises à jour dynamiquement-->
-                <a href="{{route('destination', ['id'=>'1'])}}" class="cta-button" aria-label="Explorer la Lune">{{ __("boutton_cta") }}</a><!--pour fournir une description significative du lien.-->
-            </main>  
-
-        <script src="app.js"></script>
-    </body>
-    
-</html>

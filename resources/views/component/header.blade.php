@@ -30,5 +30,5 @@
             <!-- <li role="listitem"><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li> -->
         </ul>
     </nav>
-           
+    <script src="app.js"></script>
 </header>
