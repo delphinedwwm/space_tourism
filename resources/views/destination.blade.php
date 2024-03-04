@@ -1,6 +1,5 @@
 @extends('layouts.main')
 
-
 @section('og-title', 'space tourism page destination')
 
 @section('og-url',' destination')
