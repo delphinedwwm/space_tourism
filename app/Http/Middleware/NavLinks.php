@@ -21,7 +21,7 @@ class NavLinks
 
         $navlinks= [
             "destination" => $destination ->id,
-
+            "crew" => $crew ->id,
 
         ];
 

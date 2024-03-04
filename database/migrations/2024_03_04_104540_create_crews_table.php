@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('description_en');
         });
     }
-
     /**
      * Reverse the migrations.
      */
