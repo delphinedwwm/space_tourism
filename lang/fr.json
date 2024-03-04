@@ -35,19 +35,19 @@
 
     "titre_page_equipage": "02 rencontrez l'équipage",
 
-    "commandant": "Commandant",
+    "fonction_commandant": "Commandant",
     "nom_commandant":"Douglas Hurley",
     "description_commandant": "Douglas Gerald Hurley est un ingénieur américain, un ancien pilote du Coprs des Marines et un ancien astronaute de la NASA. Il s'est lancé dans l'espace pour la troisième fois en tant que commandant du vaissaux Crew Dragon Demo-2.",
     
-    "specialiste": "Spécialiste de mission",
+    "fonction_specialiste": "Spécialiste de mission",
     "nom_specialiste": "Mark Shuttleworth",
     "description_specialiste": "Mark Richard Shuttleworth est le fondateur et PDG de Canonical, la société derrière le système d’exploitation Ubuntu basé sur Linux. Shuttleworth est devenu le premier sud-africain à voyager dans l’espace en tant que touriste spatial.",
     
-    "pilote": "Pilote",
+    "fonction_pilote": "Pilote",
     "nom_pilote": "Victor Glover",
     "description_pilote": "Pilote du premier vol opérationnel du SpaceX Crew Dragon à destination de la Station Spatiale Internationale. Glover est commandant dans la marine américaine, où il pilote un F/A-18. Il a été membre de l’équipage de l’Expedition 64 et a servi comme ingénieur de vol des systèmes de station.",
 
-    "ingenieure": "Ingenieure de vol",
+    "fonction_ingenieure": "Ingenieure de vol",
     "nom_ingenieure": "Anousheh Ansari",
     "description_ingenieure": "Anousheh Ansari est une ingénieure Irano-Américaine et cofondatrice de Prodea Systems. Ansari était la quatrième touriste de l'espace autofinancée, la première femme autofinancée à se rendre à l'ISS, et la première iranienne dans l'espace.",
 
