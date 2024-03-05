@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Backoffice\DestinationController;
 use App\Http\Controllers\Backoffice\CrewController;
+use App\Http\Controllers\Backoffice\TechnologyController;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;

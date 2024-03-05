@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             DestinationsTableSeeder::class,
-            CrewsTableSeeder::class
+            CrewsTableSeeder::class,
+            TechnologiesTableSeeder::class
         ]);
     }
 }

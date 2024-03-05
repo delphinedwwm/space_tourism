@@ -20,11 +20,12 @@ class NavLinks
         // dd('navlinks');
         $destination = Destination::first('id');
         $crew = Crew::first('id');
+        $technology = Technology::first('id');
 
         $navlinks= [
             "destination" => $destination ->id,
             "crew" => $crew ->id,
-
+            "technology" => $technology ->id
         ];
 
         view()->share('navlinks', $navlinks);
