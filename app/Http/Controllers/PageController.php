@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Destination;
+use App\Models\Crew;
 
 class PageController extends Controller
 {
@@ -31,40 +32,23 @@ class PageController extends Controller
 
     }
 
-    public function equipage($equipe) {
-        $articles = [
-            'commandant' =>
-                ['image' => asset("/images/equipage/commandant.png"),
-                'poste' => __("commandant"),
-                'nom' => __("nom_commandant"),
-                'fonction' => __("description_commandant"),
-                ],
-    
-            'specialiste' =>
-                ['image' => asset("/images/equipage/specialiste.png"),
-                'poste' => __("spécialiste de mission"),
-                'nom' => __("nom_specialiste"),
-                'fonction' => __("description_specialiste"),
-                ],
-    
-            'pilote' =>
-                ['image' => asset("/images/equipage/pilote.png"),
-                'poste' => __("pilote"),
-                'nom' => __("nom_pilote"),
-                'fonction' => __("description_pilote"),
-                ],
-    
-            'ingenieur' =>
-                ['image' => asset("/images/equipage/ingenieure.png"),
-                'poste' => __("ingenieure"),
-                'nom' => __("nom_ingenieure"),
-                'fonction' => __("description_ingenieure"),
-                ],
-        ];
-        return view('equipage', [
-            'article' => $articles[$equipe]
-        ]);
+    public function crew($id) {
+        $locale = app()->getLocale();
+
+        $member = Crew::select(
+            "id",
+            'image', 
+            "nom_{$locale} as nom",
+            "fonction_{$locale} as fonction",
+            "description_{$locale} as description",
+            )->find($id);
+
+        $links = Crew::all('id', "nom_{$locale} as nom");
+
+        return view('crew', ['member' => $member , 'links' => $links]);
+
     }
+
     public function technologie($techno) {
         $articles = [
             'lanceur' =>

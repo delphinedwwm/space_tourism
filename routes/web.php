@@ -25,7 +25,7 @@ use App\Http\Middleware\NavLinks;
 
 Route::get('/', [PageController::class, 'accueil'])->middleware(['navlinks'])->name('accueil');
 Route::get('/destination/{id}', [PageController::class, 'destination'])->middleware('navlinks')->name('destination');
-Route::get('/equipage/{equipe}', [PageController::class, 'equipage'])->middleware('navlinks')->name('equipage');
+Route::get('/crew/{id}', [PageController::class, 'crew'])->middleware('navlinks')->name('crew');
 Route::get('/technologie/{techno}', [PageController::class, 'technologie'])->middleware('navlinks')->name('technologie');
 
 Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('change.locale');
@@ -45,9 +45,17 @@ Route::get('backoffice/destination/delete/{id}', [DestinationController::class, 
 Route::delete('backoffice/destination/destroy/{id}', [DestinationController::class, 'destroy'])->name('backoffice.destination.destroy');
 // ______________________________________________________________________________________________________________________________
 
-// route pour backoffice destination _________________________________________________________________________________
+// route pour backoffice crew _________________________________________________________________________________
 Route::get('backoffice/crew', [CrewController::class, 'index'])->name('backoffice.crew.index');
 Route::get('backoffice/crew/show/{id}', [CrewController::class, 'show'])->name('backoffice.crew.show');
 
+Route::get('backoffice/crew/create', [CrewController::class, 'create'])->name('backoffice.crew.create');
+Route::post('backoffice/crew/store', [CrewController::class, 'store'])->name('backoffice.crew.store');
+
+Route::get('backoffice/crew/edit/{id}', [CrewController::class, 'edit'])->name('backoffice.crew.edit');
+Route::post('backoffice/crew/update/{id}', [CrewController::class, 'update'])->name('backoffice.crew.update');
+
+Route::get('backoffice/crew/delete/{id}', [CrewController::class, 'delete'])->name('backoffice.crew.delete');
+Route::delete('backoffice/crew/destroy/{id}', [CrewController::class, 'destroy'])->name('backoffice.crew.destroy');
 
 // ______________________________________________________________________________________________________________________________

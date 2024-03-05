@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Models\Destination;
+use App\Models\Crew;
 use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,6 +19,7 @@ class NavLinks
     {
         // dd('navlinks');
         $destination = Destination::first('id');
+        $crew = Crew::first('id');
 
         $navlinks= [
             "destination" => $destination ->id,
