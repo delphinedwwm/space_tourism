@@ -27,7 +27,7 @@
             <li role="listitem"><a href="{{route('destination', $navlinks['destination']) }}" title="page_destination"><span class="number">01</span>{{ __("Destination") }}</a></li>
             
             <li role="listitem"><a href="{{route('crew',  $navlinks['crew']) }}" title="page_crew"><span class="number">02</span>{{ __("Crew") }}</a></li>
-            <!-- <li role="listitem"><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li> -->
+            <li role="listitem"><a href="{{route('technologie', ['techno'=>'lanceur'])}}" title="page_technologie"><span class="number">03</span>{{ __("Technologie") }}</a></li>
         </ul>
     </nav>
     <script src="app.js"></script>
