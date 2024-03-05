@@ -18,12 +18,12 @@ return new class extends Migration
             $table->timestamps();
             
             $table->string('fonction_fr');
-            $table->text('nom_fr');
-            $table->string('description_fr');
+            $table->string('nom_fr');
+            $table->text('description_fr');
             
             $table->string('fonction_en');
-            $table->text('nom_en');
-            $table->string('description_en');
+            $table->string('nom_en');
+            $table->text('description_en');
         });
     }
     /**

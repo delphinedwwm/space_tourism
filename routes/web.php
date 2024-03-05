@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Backoffice\DestinationController;
+use App\Http\Controllers\Backoffice\CrewController;
+
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\LangController;
@@ -29,6 +31,7 @@ Route::get('/technologie/{techno}', [PageController::class, 'technologie'])->mid
 Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('change.locale');
 // Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
 
+// route pour backoffice destination _________________________________________________________________________________
 Route::get('backoffice/destination', [DestinationController::class, 'index'])->name('backoffice.destination.index');
 Route::get('backoffice/destination/show/{id}', [DestinationController::class, 'show'])->name('backoffice.destination.show');
 
@@ -40,3 +43,11 @@ Route::post('backoffice/destination/update/{id}', [DestinationController::class,
 
 Route::get('backoffice/destination/delete/{id}', [DestinationController::class, 'delete'])->name('backoffice.destination.delete');
 Route::delete('backoffice/destination/destroy/{id}', [DestinationController::class, 'destroy'])->name('backoffice.destination.destroy');
+// ______________________________________________________________________________________________________________________________
+
+// route pour backoffice destination _________________________________________________________________________________
+Route::get('backoffice/crew', [CrewController::class, 'index'])->name('backoffice.crew.index');
+Route::get('backoffice/crew/show/{id}', [CrewController::class, 'show'])->name('backoffice.crew.show');
+
+
+// ______________________________________________________________________________________________________________________________
