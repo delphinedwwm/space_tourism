@@ -21,7 +21,6 @@ class CrewController extends Controller
      {
          $crew = Crew::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
          return view('backoffice.crew.show', compact('crew'));
-         
      }
 
      public function create()
@@ -34,7 +33,6 @@ class CrewController extends Controller
         // Valider les données
        
         $validatedData = $request->validate([
-            // Spécifiez les règles de validation pour les champs
             'image' =>'required|image|mimes:jpg,png|max:2048',
             'fonction_fr' => 'required|string|max:255', // required = champs obligatoire et '|' est utilisée pour séparer différentes règles de validation 
             'nom_fr' => 'required|string',
@@ -58,7 +56,6 @@ class CrewController extends Controller
     {
         $crew = Crew::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
         return view('backoffice.crew.edit', compact('crew'));
-        
     }
 
     public function update(Request $request, $id)
@@ -78,12 +75,10 @@ class CrewController extends Controller
         $crew = Crew::findOrFail($id); 
         $oldImagePath = $crew->image;
 
-
         if ($request->hasFile('image')) {
             // méthode hasFile() pour vérifier si un fichier a été téléchargé avec la clé 'image' dans la requête.
         
             if ($oldImagePath) {  
-
                 // Supprimer l'image du dossier storage/app/public/images
                 $oldImagePath = str_replace('storage/', '', $oldImagePath);
                 Storage::disk('public')->delete($oldImagePath);
@@ -93,7 +88,6 @@ class CrewController extends Controller
             $path = $validatedData['image']->store('images', 'public');
             $crew->image = 'storage/'.$path;
             
-
         }
 
         $crew->save();
@@ -103,21 +97,21 @@ class CrewController extends Controller
 
     public function delete($id)
     {
-        // Trouver la destination correspondante dans la base de données
+        // Trouver la crew correspondante dans la base de données
         $crew = Crew::findOrFail($id);
 
-        // Passer la destination à la vue
+        // Passer la crew à la vue
         return view('backoffice.crew.delete', compact('crew'));
     }
 
 
-    // Supprime une destination
+    // Supprime une crew
     public function destroy($id)
     {
-        // Trouve la destination à supprimer
+        // Trouve la crew à supprimer
         $crew = Crew::findOrFail($id); // findOrFail = méthode utilisée pour récupérer un modèle par sa clé primaire (ID) à partir de la base de données
 
-        // Supprime la destination de la base de données
+        // Supprime la crew de la base de données
         $crew->delete();
 
         // Redirige l'utilisateur vers la page index 

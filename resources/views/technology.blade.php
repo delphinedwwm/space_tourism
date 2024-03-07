@@ -15,26 +15,32 @@
 
     <main class="contenu_principal" role="main" aria-labelledby="titre_principal"> <!-- role = pour indiquer que cette section est le contenu principal de la page. / la balise <h1> est le titre principal de cette section, on ajoute l'attribut aria-labelledby pour référencer cet élément.-->
         
-        <h1 class="titre"><span class="number_titre_h1">03</span>{{ __("titre_page_technologie") }}</h1>
-        
-        <figure class="img_technologie">
-            <img src="{{ $article['image'] }}" class="img_tech" alt="{{ $article['objet'] }}">
-        </figure>
+    <h1 class="titre"><span class="number_titre_h1">03</span>{{ __("titre_page_technologie") }}</h1>
 
-        <nav role="nav" class="nav_technologie">
-            <ul role="list">
-                <li role="listitem"><a href="{{ route('technologie', ['techno'=>'lanceur']) }}" alt="article_le_lanceur" aria-label="Voir l'article sur le lanceur">1</a></li><!-- pour les liens de navigation afin d'améliorer leur descriptivité -->
-                <li role="listitem"><a href="{{ route('technologie', ['techno'=>'spatioport']) }}" alt="article_le_spatioport" aria-label="Voir l'article sur le spatioport">2</a></li>
-                <li role="listitem"><a href="{{ route('technologie', ['techno'=>'capsule']) }}" alt="article_la_capsule_spaciale" aria-label="Voir l'article sur la capsule spatiale">3</a></li>
-            </ul>
-        </nav>
+    <figure class="image_techno">
+        <img src="{{ $techno['image'] }}" class="techno" alt="{{ $techno['poste'] }}">
+    </figure>
 
-        <section class="etiquette">
-            <h2 class="terminologie">{{ $article['nom'] }}</h2>
-            <h2 class="objet">{{ $article['objet'] }}</h2>
-            <p class="description" aria-live="polite">{{ $article['description'] }}</p><!-- l'attribut aria-live au paragraphe avec la classe description (s'il contient des informations dynamiques)-->
-        </section>
+    <hr>
 
-    </main>   
+    <nav class="nav_equipe">
+        <ul role="list">
             
+        
+            @foreach($links as $link)
+                <li role="listitem"> <a href="{{ route('technology', $link->id) }}"> {{ $link->nom }} </a></li>
+            @endforeach
+        </ul>
+    </nav>
+    <section class="etiquette" aria-labelledby="nom_technologie"><!--pour faire référence au titre (<h2 class="nom_planete">). Cela peut aider les utilisateurs d'outils d'assistance à comprendre la relation entre la section et son titre.-->
+        <h2 class="nom_technologie">{{ $techno->nom }}</h2>
+        
+        <p class="fonction" aria-live="polite">{{ $techno->fonction }}</p><!-- utilisé ici pour indiquer que des mises à jour dynamiques sur la page seront annoncées de manière discrète, sans interrompre l'utilisateur.-->
+        <hr>
+        <p class="description" aria-label="Description: {{ $techno->description }}">{{ $techno->description }}</p>
+
+    </section>
+
+
+        
 @endsection

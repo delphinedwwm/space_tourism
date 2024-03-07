@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,9 +63,7 @@
                 @error('description_fr')
                 <span>{{ $message }}</span>
                 @enderror
-            </div>
-           
-         
+            </div>         
             <button type="submit" class="btn btn-primary">Mettre à jour</button>
         </form>
     </div>

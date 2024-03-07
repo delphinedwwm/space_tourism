@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Destination;
 use App\Models\Crew;
+use App\Models\Technology;
 
 class PageController extends Controller
 {
@@ -49,32 +50,18 @@ class PageController extends Controller
 
     }
 
-    public function technologie($techno) {
-        $articles = [
-            'lanceur' =>
-                ['image' => asset("/images/technologie/lanceur.png"),
-                'nom' => __("terminologie"),
-                'objet' => __("lanceur"),
-                'description' => __("description_lanceur"),
-                ],
+    public function technology($id) {
+        $locale = app()->getLocale();
 
-            'spatioport' =>
-                ['image' => asset("/images/technologie/spatioport.png"),
-                'nom' => __("terminologie"),
-                'objet' => __("spatiaport"),
-                'description' => __("description_spatioport"),
-                ],
+        $techno = Technology::select(
+            "id",
+            'image', 
+            "nom_{$locale} as nom",
+            "description_{$locale} as description",
+            )->find($id);
 
-            'capsule' =>    
-                ['image' => asset("/images/technologie/capsule_spaciale.png"),
-                'nom' => __("terminologie"),
-                'objet' => __("capsule"),
-                'description' => __("description_capsule"),
-                ],
-        ];
+        $links = Technology::all('id', "nom_{$locale} as nom");
 
-        return view('technologie', [
-            'article' => $articles[$techno]
-        ]); 
-        }
+        return view('technology', ['techno' => $techno , 'links' => $links]);
     }
+}
