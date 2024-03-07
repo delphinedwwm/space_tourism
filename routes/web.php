@@ -27,7 +27,7 @@ use App\Http\Middleware\NavLinks;
 Route::get('/', [PageController::class, 'accueil'])->middleware(['navlinks'])->name('accueil');
 Route::get('/destination/{id}', [PageController::class, 'destination'])->middleware('navlinks')->name('destination');
 Route::get('/crew/{id}', [PageController::class, 'crew'])->middleware('navlinks')->name('crew');
-Route::get('/technologie/{techno}', [PageController::class, 'technologie'])->middleware('navlinks')->name('technologie');
+Route::get('/technology/{id}', [PageController::class, 'technology'])->middleware('navlinks')->name('technology');
 
 Route::get('lang/{locale}', [LangController::class, 'changeLocale'])->name('change.locale');
 // Route::get('lang/{locale}', 'LangController@changeLocale')->name('change.locale');   // capture une variable locale à partir de l'URL et dirige la requête vers la méthode changeLocale du contrôleur LangController.
@@ -58,5 +58,20 @@ Route::post('backoffice/crew/update/{id}', [CrewController::class, 'update'])->n
 
 Route::get('backoffice/crew/delete/{id}', [CrewController::class, 'delete'])->name('backoffice.crew.delete');
 Route::delete('backoffice/crew/destroy/{id}', [CrewController::class, 'destroy'])->name('backoffice.crew.destroy');
+
+// ______________________________________________________________________________________________________________________________
+
+// route pour backoffice technology _________________________________________________________________________________
+Route::get('backoffice/technology', [TechnologyController::class, 'index'])->name('backoffice.technology.index');
+Route::get('backoffice/technology/show/{id}', [TechnologyController::class, 'show'])->name('backoffice.technology.show');
+
+Route::get('backoffice/technology/create', [TechnologyController::class, 'create'])->name('backoffice.technology.create');
+Route::post('backoffice/technology/store', [TechnologyController::class, 'store'])->name('backoffice.technology.store');
+
+Route::get('backoffice/technology/edit/{id}', [TechnologyController::class, 'edit'])->name('backoffice.technology.edit');
+Route::post('backoffice/technology/update/{id}', [TechnologyController::class, 'update'])->name('backoffice.technology.update');
+
+Route::get('backoffice/technology/delete/{id}', [TechnologyController::class, 'delete'])->name('backoffice.technology.delete');
+Route::delete('backoffice/technology/destroy/{id}', [TechnologyController::class, 'destroy'])->name('backoffice.technology.destroy');
 
 // ______________________________________________________________________________________________________________________________

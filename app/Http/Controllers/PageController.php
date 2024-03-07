@@ -57,7 +57,6 @@ class PageController extends Controller
             "id",
             'image', 
             "nom_{$locale} as nom",
-            "objet_{$locale} as objet",
             "description_{$locale} as description",
             )->find($id);
 

@@ -26,8 +26,8 @@
                         <span>{{ $message }}</span>
                 @enderror
             <div class="form-group">
-                <label for="distance_fr">Fonction (FR)</label>
-                <input type="text" class="form-control" id="distance_fr" name="fonction_fr" value = "{{ old('fonction_fr', '') }}">
+                <label for="fonction_fr">Fonction (FR)</label>
+                <input type="text" class="form-control" id="fonction_fr" name="fonction_fr" value = "{{ old('fonction_fr', '') }}">
                 @error('fonction_fr')
                     <span>{{ $message }}</span>
                 @enderror
