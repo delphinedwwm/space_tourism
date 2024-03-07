@@ -32,6 +32,7 @@
             @endforeach
         </ul>
     </nav>
+    
     <section class="etiquette" aria-labelledby="nom_technologie"><!--pour faire référence au titre (<h2 class="nom_planete">). Cela peut aider les utilisateurs d'outils d'assistance à comprendre la relation entre la section et son titre.-->
         <h2 class="nom_technologie">{{ $techno->nom }}</h2>
         
@@ -41,6 +42,4 @@
 
     </section>
 
-
-        
 @endsection

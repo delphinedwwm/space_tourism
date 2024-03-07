@@ -7,7 +7,7 @@
     @vite(['public/css/app.css', 'public/js/app.js'])
 
 </head>
-<body class="background @yield('img-bkgrd')">
+<body>
 
     @include('component.header')
 
